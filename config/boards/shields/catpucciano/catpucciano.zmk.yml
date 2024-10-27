@@ -2,7 +2,7 @@ file_format: "1"
 id: catpucciano
 name: CATPUCCIANO
 type: shield
-url: https://github.com/GEIGEIGEIST/TOTEM
+url: https://github.com/Catpucciano/ErgoKeyboard
 requires: [seeeduino_xiao_ble]
 features:
   - keys
