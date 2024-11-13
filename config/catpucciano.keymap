@@ -35,6 +35,26 @@
             bindings = <&kp SEMI>;
             key-positions = <6 7>;
         };
+
+        Copy {
+            bindings = <&kp LC(C)>;
+            key-positions = <20 21>;
+        };
+
+        Paste {
+            bindings = <&kp LC(V)>;
+            key-positions = <21 22>;
+        };
+
+        Cut {
+            bindings = <&kp LC(X)>;
+            key-positions = <19 20>;
+        };
+
+        Undo {
+            bindings = <&kp LC(Z)>;
+            key-positions = <18 19>;
+        };
     };
 
     behaviors {
@@ -54,10 +74,11 @@
             bindings = <&kp N0>, <&kp RIGHT_PARENTHESIS>;
         };
 
-        LetterC_Copy: LetterC_Copy {
+        Copy: Copy {
             compatible = "zmk,behavior-tap-dance";
-            label = "LETTERC_COPY";
+            label = "COPY";
             #binding-cells = <0>;
+            tapping-term-ms = <200>;
             bindings = <&kp C>, <&kp LC(C)>;
         };
     };
@@ -86,7 +107,7 @@
             bindings = <
             &kp W       &kp F        &kp P        &kp B      &kp J    &kp L        &kp U        &kp Y
 &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G      &kp M    &mt RSHFT N  &mt RCTRL E  &mt RALT I  &mt RGUI O
-&kp Z       &kp X       &kp C        &kp D        &kp V      &kp K    &kp H        &kp COMMA    &kp DOT     &kp FSLH
+&kp Z       &kp X       &Copy        &kp D        &kp V      &kp K    &kp H        &kp COMMA    &kp DOT     &kp FSLH
                         &kp DEL      &lt 1 TAB    &kp SPACE  &kp RET  &lt 2 ESC    &kp BSPC
             >;
         };
