@@ -99,7 +99,7 @@
             #binding-cells = <0>;
             bindings = <&mt RIGHT_SHIFT N>, <&kp ESC>;
 
-            tapping-term-ms = <150>;
+            tapping-term-ms = <180>;
         };
 
         BSPC_deleteWord: BSPC_deleteWord {
@@ -108,6 +108,15 @@
             #binding-cells = <0>;
             tapping-term-ms = <180>;
             bindings = <&kp BACKSPACE>, <&kp LC(BSPC)>;
+        };
+
+        quote: quote {
+            compatible = "zmk,behavior-tap-dance";
+            label = "QUOTE";
+            #binding-cells = <0>;
+            bindings = <&kp SINGLE_QUOTE>, <&kp DOUBLE_QUOTES>;
+
+            tapping-term-ms = <180>;
         };
     };
 
@@ -135,7 +144,7 @@
             bindings = <
             &kp W       &kp F        &kp P        &kp B      &kp J             &kp L               &kp U        &kp Y
 &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G      &kp M             &ModTapShift_N_ESC  &mt RCTRL E  &mt RALT I  &mt RGUI O
-&kp Z       &kp X       &kp C        &kp D        &kp V      &kp K             &kp H               &kp COMMA    &kp DOT     &kp FSLH
+&kp Z       &kp X       &kp C        &kp D        &kp V      &kp K             &kp H               &kp COMMA    &kp DOT     &kp SINGLE_QUOTE
                         &kp ESC      &lt 1 TAB    &kp SPACE  &BSPC_deleteWord  &kp ENTER           &lt 2 ESC
             >;
         };
@@ -144,8 +153,8 @@
             bindings = <
               &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp ASTRK
 &Number1      &Number2              &Number3               &Number4          &Number5           &kp MINUS    &kp PLUS        &kp EQUAL        &kp SEMI   &kp DOUBLE_QUOTES
-&kp NUMBER_6  &kp N7                &kp N8                 &kp N9            &kp N0             &kp UNDER    &kp BACKSLASH   &kp GRAVE        &kp COLON  &kp SINGLE_QUOTE
-                                    &trans                 &trans            &trans             &kp DELETE   &none           &trans
+&kp NUMBER_6  &kp N7                &kp N8                 &kp N9            &kp N0             &kp UNDER    &kp SLASH       &kp GRAVE        &kp COLON  &kp SINGLE_QUOTE
+                                    &trans                 &trans            &trans             &kp DELETE   &kp BACKSLASH   &trans
             >;
         };
 
