@@ -58,22 +58,6 @@
     };
 
     behaviors {
-        Number9: Number9 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "NUMBER9";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp N9>, <&kp LEFT_PARENTHESIS>;
-        };
-
-        Number0: Number0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "NUMBER0";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp N0>, <&kp RIGHT_PARENTHESIS>;
-        };
-
         Number1: Number1 {
             compatible = "zmk,behavior-tap-dance";
             label = "NUMBER1";
@@ -108,6 +92,23 @@
             #binding-cells = <0>;
             bindings = <&kp N5>, <&kp PERCENT>;
         };
+
+        ModTapShift_N_ESC: ModTapShift_N_ESC {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MODTAPSHIFT_N_ESC";
+            #binding-cells = <0>;
+            bindings = <&mt RIGHT_SHIFT N>, <&kp ESC>;
+
+            tapping-term-ms = <150>;
+        };
+
+        BSPC_deleteWord: BSPC_deleteWord {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BSPC_DELETEWORD";
+            #binding-cells = <0>;
+            tapping-term-ms = <180>;
+            bindings = <&kp BACKSPACE>, <&kp LC(BSPC)>;
+        };
     };
 
     keymap {
@@ -132,10 +133,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &kp W       &kp F        &kp P        &kp B      &kp J     &kp L        &kp U        &kp Y
-&mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G      &kp M     &mt RSHFT N  &mt RCTRL E  &mt RALT I  &mt RGUI O
-&kp Z       &kp X       &kp C        &kp D        &kp V      &kp K     &kp H        &kp COMMA    &kp DOT     &kp FSLH
-                        &kp DEL      &lt 1 TAB    &kp SPACE  &kp BSPC  &lt 2 ESC    &kp ENTER
+            &kp W       &kp F        &kp P        &kp B      &kp J             &kp L               &kp U        &kp Y
+&mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G      &kp M             &ModTapShift_N_ESC  &mt RCTRL E  &mt RALT I  &mt RGUI O
+&kp Z       &kp X       &kp C        &kp D        &kp V      &kp K             &kp H               &kp COMMA    &kp DOT     &kp FSLH
+                        &kp ESC      &lt 1 TAB    &kp SPACE  &BSPC_deleteWord  &kp ENTER           &lt 2 ESC
             >;
         };
 
@@ -143,7 +144,7 @@
             bindings = <
               &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp ASTRK
 &Number1      &Number2              &Number3               &Number4          &Number5           &kp MINUS    &kp PLUS        &kp EQUAL        &kp SEMI   &kp DOUBLE_QUOTES
-&kp NUMBER_6  &kp N7                &kp N8                 &Number9          &Number0           &kp GRAVE    &kp BACKSLASH   &none            &kp COLON  &kp SINGLE_QUOTE
+&kp NUMBER_6  &kp N7                &kp N8                 &kp N9            &kp N0             &kp UNDER    &kp BACKSLASH   &kp GRAVE        &kp COLON  &kp SINGLE_QUOTE
                                     &trans                 &trans            &trans             &kp DELETE   &none           &trans
             >;
         };
