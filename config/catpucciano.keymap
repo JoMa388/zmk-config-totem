@@ -93,15 +93,6 @@
             bindings = <&kp N5>, <&kp PERCENT>;
         };
 
-        ModTapShift_N_ESC: ModTapShift_N_ESC {
-            compatible = "zmk,behavior-tap-dance";
-            label = "MODTAPSHIFT_N_ESC";
-            #binding-cells = <0>;
-            bindings = <&mt RIGHT_SHIFT N>, <&kp ESC>;
-
-            tapping-term-ms = <180>;
-        };
-
         BSPC_deleteWord: BSPC_deleteWord {
             compatible = "zmk,behavior-tap-dance";
             label = "BSPC_DELETEWORD";
@@ -110,13 +101,25 @@
             bindings = <&kp BACKSPACE>, <&kp LC(BSPC)>;
         };
 
-        quote: quote {
+        Number6: Number6 {
             compatible = "zmk,behavior-tap-dance";
-            label = "QUOTE";
+            label = "NUMBER6";
             #binding-cells = <0>;
-            bindings = <&kp SINGLE_QUOTE>, <&kp DOUBLE_QUOTES>;
+            bindings = <&kp NUMBER_6>, <&kp CARET>;
+        };
 
-            tapping-term-ms = <180>;
+        Number7: Number7 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NUMBER7";
+            #binding-cells = <0>;
+            bindings = <&kp N7>, <&kp AMPS>;
+        };
+
+        Number8: Number8 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NUMBER8";
+            #binding-cells = <0>;
+            bindings = <&kp N8>, <&kp ASTRK>;
         };
     };
 
@@ -151,10 +154,10 @@
 
         Symbol {
             bindings = <
-              &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp ASTRK
-&Number1      &Number2              &Number3               &Number4          &Number5           &kp MINUS    &kp PLUS        &kp EQUAL        &kp SEMI   &kp DOUBLE_QUOTES
-&kp NUMBER_6  &kp N7                &kp N8                 &kp N9            &kp N0             &kp UNDER    &kp SLASH       &kp GRAVE        &kp COLON  &kp SINGLE_QUOTE
-                                    &trans                 &trans            &trans             &kp DELETE   &kp BACKSLASH   &trans
+          &kp TILDE  &kp GRAVE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS
+&Number1  &Number2   &Number3   &Number4          &Number5           &kp MINUS             &kp PLUS        &kp EQUAL        &kp COLON              &kp SEMI
+&Number6  &Number7   &Number8   &kp N9            &kp N0             &kp UNDER             &kp SLASH       &kp BACKSLASH    &kp PIPE               &kp QUESTION
+                     &trans     &trans            &trans             &kp DELETE            &trans          &mo 3
             >;
         };
 
@@ -169,10 +172,10 @@
 
         Function {
             bindings = <
-        &kp F11  &kp F12      &kp F13  &kp F14  &kp F15  &kp F16  &kp F17  &kp F18
-&kp F1  &kp F2   &kp F3       &kp F4   &kp F5   &trans   &trans   &trans   &trans   &trans
-&kp F6  &kp F7   &kp F8       &kp F9   &kp F10  &trans   &trans   &trans   &trans   &trans
-                 &bootloader  &trans   &trans   &trans   &trans   &trans
+        &kp F11  &kp F12      &kp F13  &kp F14  &kp F15       &kp F16  &kp F17  &kp F18
+&kp F1  &kp F2   &kp F3       &kp F4   &kp F5   &kp C_VOL_UP  &trans   &trans   &trans   &trans
+&kp F6  &kp F7   &kp F8       &kp F9   &kp F10  &kp C_VOL_DN  &trans   &trans   &trans   &trans
+                 &bootloader  &trans   &trans   &trans        &trans   &trans
             >;
         };
     };
