@@ -33,9 +33,14 @@
     combos {
         compatible = "zmk,combos";
 
-        Enter {
+        Enter_Right {
             bindings = <&kp ENTER>;
-            key-positions = <16 17 18>;
+            key-positions = <16 17>;
+        };
+
+        Enter_Left {
+            bindings = <&kp ENTER>;
+            key-positions = <13 12>;
         };
     };
 
@@ -61,10 +66,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                  &kp Q       &kp W       &kp F        &kp P        &kp B        &kp J       &kp L            &kp U        &kp Y       &kp SEMI
-                  &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G        &kp M       &mt RSHFT N      &mt RCTRL E  &mt RALT I  &mt RGUI O
-&mt LCTRL ESCAPE  &kp Z       &kp X       &kp C        &kp D        &kp V        &kp K       &kp H            &kp COMMA    &kp DOT     &kp FSLH    &kp SINGLE_QUOTE
-                                          &kp DEL      &lt 1 TAB    &kp SPACE    &kp K_BACK  &lt 2 BACKSPACE  &kp ESC
+                  &kp Q       &kp W       &kp F        &kp P        &kp B      &kp J       &kp L            &kp U        &kp Y       &kp SEMI
+                  &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G      &kp M       &mt RSHFT N      &mt RCTRL E  &mt RALT I  &mt RGUI O
+&mt LCTRL ESCAPE  &kp Z       &kp X       &kp C        &kp D        &kp V      &kp K       &kp H            &kp COMMA    &kp DOT     &kp FSLH    &kp SINGLE_QUOTE
+                                          &lt 3 ENTER  &lt 1 SPACE  &kp TAB    &kp K_BACK  &lt 2 BACKSPACE  &kp ENTER
             >;
         };
 
@@ -122,10 +127,10 @@
 
         layer_3 {
             bindings = <
-             &trans  &trans  &trans  &trans  &kp C_VOLUME_UP    &kp C_MUTE        &trans  &trans  &trans  &trans
-             &trans  &trans  &trans  &trans  &kp C_VOL_DN       &kp C_PLAY_PAUSE  &trans  &trans  &trans  &trans
-&bootloader  &trans  &trans  &trans  &trans  &trans             &trans            &trans  &trans  &trans  &trans  &bootloader
-                             &trans  &trans  &trans             &trans            &trans  &trans
+             &trans   &kp F13  &kp F14  &kp F15  &kp C_VOLUME_UP    &kp C_MUTE        &trans  &trans  &trans  &trans
+             &kp F16  &kp F17  &kp F18  &kp F19  &kp F20            &kp C_PLAY_PAUSE  &trans  &trans  &trans  &trans
+&bootloader  &kp F21  &kp F22  &none    &kp F23  &kp F24            &trans            &trans  &trans  &trans  &trans  &bootloader
+                               &trans   &trans   &trans             &trans            &trans  &trans
             >;
         };
 
