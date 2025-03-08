@@ -52,7 +52,7 @@
         Awards: Awards {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(A) &kp W &kp A &kp R &kp D &kp S>;
+            bindings = <&kp LC(A) &kp BACKSPACE &kp LS(A) &kp W &kp A &kp R &kp D &kp S>;
             label = "AWARDS";
         };
     };
