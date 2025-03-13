@@ -46,13 +46,18 @@
             bindings = <&kp ENTER>;
             key-positions = <13 12>;
         };
+
+        Legacy {
+            bindings = <&tog 5>;
+            key-positions = <5 9 26 30>;
+        };
     };
 
     macros {
         Awards: Awards {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(A) &kp BACKSPACE &kp LS(A) &kp W &kp A &kp R &kp D &kp S>;
+            bindings = <&kp LC(A) &kp BACKSPACE &kp LS(A) &kp W &kp A &kp R &kp D &kp S &kp SPACE>;
             label = "AWARDS";
         };
     };
@@ -81,7 +86,7 @@
             bindings = <
                   &kp Q       &kp W       &kp F        &kp P        &kp B          &kp J            &kp L            &kp U        &kp Y       &kp SEMI
                   &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G          &kp M            &mt RSHFT N      &mt RCTRL E  &mt RALT I  &mt RGUI O
-&mt LCTRL ESCAPE  &kp Z       &kp X       &kp C        &kp D        &kp V          &kp K            &kp H            &kp COMMA    &kp DOT     &kp FSLH    &tog 5
+&mt LCTRL ESCAPE  &kp Z       &kp X       &kp C        &kp D        &kp V          &kp K            &kp H            &kp COMMA    &kp DOT     &kp FSLH    &kp SQT
                                           &kp ENTER    &lt 1 TAB    &lt 3 SPACE    &lt 4 BACKSPACE  &lt 2 BACKSPACE  &kp ENTER
             >;
         };
@@ -158,10 +163,10 @@
 
         Legacy {
             bindings = <
-           &Awards  &trans  &tog 0         &trans     &kp PERIOD    &trans  &trans  &trans  &trans  &trans
-           &kp N1   &kp N2  &kp N3         &kp N4     &kp N5        &trans  &trans  &trans  &trans  &trans
-&kp LC(R)  &kp N6   &kp N7  &kp N8         &kp N9     &kp N0        &trans  &trans  &trans  &trans  &trans  &trans
-                            &kp BACKSPACE  &mkp LCLK  &kp ENTER     &trans  &trans  &trans
+         &Awards  &trans  &none          &trans     &kp PERIOD    &trans  &trans  &trans  &trans  &trans
+         &kp N1   &kp N2  &kp N3         &kp N4     &kp N5        &trans  &trans  &trans  &trans  &trans
+&kp TAB  &kp N6   &kp N7  &kp N8         &kp N9     &kp N0        &trans  &trans  &trans  &trans  &trans  &trans
+                          &kp BACKSPACE  &mkp LCLK  &kp ENTER     &trans  &trans  &trans
             >;
         };
 
