@@ -161,16 +161,16 @@
 
         layer_4 {
             bindings = <
-        &trans  &mkp RCLK       &mmv MOVE_UP    &mkp LCLK        &trans    &trans          &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &trans
-        &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans    &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans
-&trans  &trans  &trans          &trans          &trans           &trans    &msc SCRL_DOWN  &msc SCRL_DOWN  &trans          &trans           &trans  &trans
+        &trans  &mkp RCLK       &mmv MOVE_UP    &mkp LCLK        &trans    &trans          &mkp LCLK       &none   &mkp RCLK  &trans
+        &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans    &msc SCRL_UP    &none           &none   &none      &trans
+&trans  &trans  &trans          &trans          &trans           &trans    &msc SCRL_DOWN  &msc SCRL_DOWN  &trans  &trans     &trans  &trans
                                 &trans          &trans           &trans    &trans          &trans          &trans
             >;
         };
 
         Legacy {
             bindings = <
-         &Awards  &trans  &none          &trans     &kp PERIOD     &trans  &trans  &trans  &trans  &trans
+         &Awards  &trans  &CMD_Copy      &trans     &kp PERIOD     &trans  &trans  &trans  &trans  &trans
          &kp N1   &kp N2  &kp N3         &kp N4     &kp N5         &trans  &trans  &trans  &trans  &trans
 &kp TAB  &kp N6   &kp N7  &kp N8         &kp N9     &kp N0         &trans  &trans  &trans  &trans  &trans  &trans
                           &kp BACKSPACE  &mkp LCLK  &lt 4 ENTER    &trans  &trans  &trans
