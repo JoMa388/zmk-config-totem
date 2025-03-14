@@ -60,13 +60,6 @@
             bindings = <&kp LC(A) &kp BACKSPACE &kp LS(A) &kp W &kp A &kp R &kp D &kp S &kp SPACE>;
             label = "AWARDS";
         };
-
-        CMD_Copy: CMD_Copy {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_GUI &kp C &kp M &kp D &kp ENTER &kp X &kp C &kp O &kp P &kp Y &kp SPACE &kp DQT &kp C &kp COLON &kp FSLH &kp LS(U) &kp S &kp E &kp R &kp S &kp FSLH &kp N &kp A &kp M &kp E &kp FSLH &kp LS(V) &kp I &kp D &kp E &kp O &kp S &kp DQT &kp SPACE &kp DQT &kp C &kp COLON &kp FSLH &kp LS(U) &kp S &kp E &kp R &kp S &kp FSLH &kp N &kp A &kp M &kp E &kp FSLH &kp LS(V) &kp I &kp D &kp E &kp O &kp S &kp DQT &kp SPACE>;
-            label = "CMD_COPY";
-        };
     };
 
     keymap {
@@ -170,7 +163,7 @@
 
         Legacy {
             bindings = <
-         &Awards  &trans  &CMD_Copy      &trans     &kp PERIOD     &trans  &trans  &trans  &trans  &trans
+         &Awards  &trans  &none          &trans     &kp PERIOD     &trans  &trans  &trans  &trans  &trans
          &kp N1   &kp N2  &kp N3         &kp N4     &kp N5         &trans  &trans  &trans  &trans  &trans
 &kp TAB  &kp N6   &kp N7  &kp N8         &kp N9     &kp N0         &trans  &trans  &trans  &trans  &trans  &trans
                           &kp BACKSPACE  &mkp LCLK  &lt 4 ENTER    &trans  &trans  &trans
