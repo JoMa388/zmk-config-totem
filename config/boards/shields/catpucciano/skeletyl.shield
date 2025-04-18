@@ -1,8 +1,8 @@
 # Copyright (c) 2022 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-config SHIELD_CATPUCCIANO_LEFT
+config SHIELD_SKELETYL_LEFT
     def_bool $(shields_list_contains,skeletyl_left)
 
-config SHIELD_CATPUCCIANO_RIGHT
+config SHIELD_SKELETYL_RIGHT
     def_bool $(shields_list_contains,skeletyl_right)
