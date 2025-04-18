@@ -1,8 +1,8 @@
 file_format: "1"
 id: catpucciano
-name: CATPUCCIANO
+name: catpucciano
 type: shield
-url: https://github.com/Catpucciano/ErgoKeyboard
+url: https://github.com/JoMa388
 requires: [seeeduino_xiao_ble]
 features:
   - keys
