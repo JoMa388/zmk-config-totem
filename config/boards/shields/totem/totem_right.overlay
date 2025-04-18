@@ -4,7 +4,11 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "catpucciano.dtsi"
+#include "totem.dtsi"
+
+&default_transform {
+    col-offset = <6>;
+};
 
 &kscan0 {
     col-gpios
@@ -13,5 +17,6 @@
         , <&xiao_d 2 GPIO_ACTIVE_HIGH>
         , <&xiao_d 3 GPIO_ACTIVE_HIGH>
         , <&xiao_d 4 GPIO_ACTIVE_HIGH>
+        , <&xiao_d 5 GPIO_ACTIVE_HIGH>
         ;
 };
