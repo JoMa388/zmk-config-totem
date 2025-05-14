@@ -75,6 +75,15 @@
         };
     };
 
+    behaviors {
+        mute: mute {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MUTE";
+            #binding-cells = <0>;
+            bindings = <&kp SQT>, <&kp C_MUTE>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -123,10 +132,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-         &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT    &kp UNDER         &kp AMPS        &kp ASTRK             &kp GRAVE              &kp TILDE
-         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5         &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE
-&kp SQT  &kp NUMBER_6  &kp N7        &kp N8        &kp N9        &kp N0         &kp MINUS         &kp PLUS        &kp EQUAL             &kp GREATER_THAN       &kp BSLH         &kp RIGHT_BRACKET
-                                     &kp C_VOL_UP  &kp C_VOL_DN  &trans         &mo 3             &Delete_Line    &kp DELETE
+       &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT    &kp UNDER         &kp AMPS        &kp ASTRK             &kp GRAVE              &kp TILDE
+       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5         &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE
+&mute  &kp NUMBER_6  &kp N7        &kp N8        &kp N9        &kp N0         &kp MINUS         &kp PLUS        &kp EQUAL             &kp GREATER_THAN       &kp BSLH         &kp RIGHT_BRACKET
+                                   &kp C_VOL_UP  &kp C_VOL_DN  &trans         &mo 3             &Delete_Line    &kp DELETE
             >;
         };
 
