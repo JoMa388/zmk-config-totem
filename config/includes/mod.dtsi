@@ -26,6 +26,24 @@
             quick-tap-ms = <175>;
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 25 32 33 34 35 36 37>; 
         };
+
+
+        // Tap: comma | Shift + tap: semicolon | Ctrl + shift + tap: <.
+        comma_semi: comma_semi {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+
+            bindings = <&kp comma>, <inner_comma_lessthan>;
+            mods = <SFT>;
+        };
+
+        inner_comma_lessthan: inner_comma_lessthan {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            
+            bindings = <&kp SEMICOLON>, <&kp LESS_THAN>;
+            mods = <CTL>;
+        };
     };
 };
 
