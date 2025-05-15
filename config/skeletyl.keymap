@@ -71,6 +71,24 @@
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41>;
             hold-trigger-on-release;
         };
+
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NEW_BEHAVIOR";
+            bindings = <&kp SEMI>, <&kp LT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        comma_morph: comma_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMMA_MORPH";
+            bindings = <&kp COMMA>, <&comma_morph>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     macros {
@@ -88,9 +106,9 @@
 
         default_layer {
             bindings = <
-&out OUT_TOG   &kp Q        &kp W       &kp F        &kp P        &kp B             &kp J          &kp L        &kp U            &kp Y         &kp DQT   &kp TILDE
-&mt LCTRL ESC  &hml LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G             &kp M          &kp N        &kp E            &kp I         &kp O     &kp SEMI
-&kp SQT        &kp Z        &kp X       &kp C        &kp D        &kp V             &kp K          &mt RSHFT H  &mt RCTRL COMMA  &mt RALT DOT  &kp FSLH  &kp BACKSLASH
+&out OUT_TOG   &kp Q        &kp W       &kp F        &kp P        &kp B             &kp J          &kp L        &kp U         &kp Y         &kp DQT   &kp TILDE
+&mt LCTRL ESC  &hml LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G             &kp M          &kp N        &mt RCTRL E   &kp I         &kp O     &kp SEMI
+&kp SQT        &kp Z        &kp X       &kp C        &kp D        &kp V             &kp K          &mt RSHFT H  &comma_morph  &mt RALT DOT  &kp FSLH  &kp BACKSLASH
                                         &lt 4 TAB    &lt 1 SPACE  &Win_Spotlight    &kp RIGHT_GUI  &lt 2 BSPC   &kp ENTER
             >;
         };
