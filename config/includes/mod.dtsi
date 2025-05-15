@@ -33,7 +33,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
 
-            bindings = <&kp comma>, <inner_comma_lessthan>;
+            bindings = <&kp comma>, <&inner_comma_lessthan>;
             mods = <SFT>;
         };
 
