@@ -32,7 +32,7 @@
         semi_lessthan: semi_lessthan {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp SEMI, <&kp LESS_THAN;
+            bindings = <&kp SEMI>, <&kp LESS_THAN>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
         comma_morph: comma_semi {
