@@ -29,12 +29,17 @@
 
 
         // Tap: comma | Shift + tap: semicolon | Ctrl + shift + tap: <.
-        comma_morph: mod_morph {
+        semi_lessthan: semi_lessthan {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-
-            bindings = <&kp LESS_THAN>, <&kp SEMICOLON>, <&kp COMMA>;
-            mods = <(MOD_LCTL | MOD_SHIFT)>, <MOD_SHIFT>, <0>;
+            bindings = <&kp SEMI, <&kp LESS_THAN;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+        comma_morph: comma_semi {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp comma>, <&semi_lessthan>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 };
