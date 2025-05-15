@@ -31,14 +31,19 @@
         // Tap: comma | Shift + tap: semicolon | Ctrl + shift + tap: <.
         semi_lessthan: semi_lessthan {
             compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
+            label = "Semi_<";
             bindings = <&kp SEMI>, <&kp LESS_THAN>;
+
+            #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
-        comma_morph: comma_semi {
+
+        comma_morph: comma_morph {
             compatible = "zmk,behavior-mod-morph";
+            label = "COMMA_MORPH";
+            bindings = <&kp COMMA>, <&semi_lessthan>;
+
             #binding-cells = <0>;
-            bindings = <&kp comma>, <&semi_lessthan>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
