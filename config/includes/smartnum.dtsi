@@ -1,2 +1,16 @@
 #include <behaviors/num_word.dtsi>
 
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    behaviors {
+        num_dance: num_dance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+
+            tapping-term-ms = <200>;
+            bindings = <&num_word 1>, <&sl 1>;
+        };
+    };
+};
