@@ -14,6 +14,7 @@
 #include "includes/mod.dtsi"
 #include "includes/combos.dtsi"
 #include "includes/smartnum.dtsi"
+#include "includes/tristate.dtsi"
 
 / {
     combos {
