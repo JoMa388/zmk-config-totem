@@ -12,5 +12,14 @@
             tapping-term-ms = <200>;
             bindings = <&num_word 1>, <&sl 1>;
         };
+        smart_num: mod_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            bindings = <&mo>, <&num_dance;
+        };
     };
 };

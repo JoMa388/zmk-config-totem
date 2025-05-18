@@ -64,7 +64,7 @@
                   &kp Q        &kp W        &kp F          &kp P         &kp B                  &kp J            &kp L         &kp U           &kp Y        &kp DOUBLE_QUOTES
                   &hml LGUI A  &hml LALT R  &hml LSHFT S   &hml LCTRL T  &kp G                  &kp M            &hmr RCTRL N  &hmr RSHFT E    &hmr RALT I  &hmr RGUI O
 &hml LCTRL ESCAPE &kp Z        &kp X        &kp C          &kp D         &kp V                  &kp K            &kp H         &comma_morph    &dot_morph   &kp FSLH           &kp SEMI
-                                            &kp TAB        &num_word 1  &lt 1 SPACE            &lt 2 BACKSPACE  &kp ENTER     &kp RIGHT_GUI
+                                            &kp TAB        &num_dance  &lt 1 SPACE            &lt 2 BACKSPACE  &kp ENTER     &kp RIGHT_GUI
             >;
         };
 
