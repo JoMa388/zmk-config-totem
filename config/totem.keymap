@@ -40,7 +40,7 @@
     keymap {
         compatible = "zmk,keymap";
         base_layer {
-        label = "BASE"
+        label = "BASE";
 
             bindings = <
                     &kp Q         &kp W         &kp F         &kp P         &kp              &kp J         &kp L           &kp U           &kp Y         &kp DQT    
@@ -53,7 +53,7 @@
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
         nav {
-        label = "NAV"
+        label = "NAV";
             bindings = <
                     &trans        &trans        &kp LS(TAB)   &swapper      &trans           &trans        &trans          &trans          &trans        &trans 
                     &trans        &trans        &trans        &trans        &trans           &kp LEFT      &kp DOWN        &kp UP          &kp RIGHT     &trans     
@@ -66,7 +66,7 @@
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
         sim_layer {
-        label = "SYM"    
+        label = "SYM";    
             bindings = <
          &kp F1   &kp F2          &kp F3          &kp F4           &kp F5       &kp F6          &kp F7          &kp F8        &kp F9           &kp TILDE
          &kp F11  &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_RIGHT  &trans       &kp LEFT        &kp DOWN        &kp UP_ARROW  &kp RIGHT        &trans
