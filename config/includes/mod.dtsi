@@ -65,6 +65,16 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+
+        q_excl: question_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "QUESTION_MORPH";
+            bindings = <&kp QMARK>, <&kp EXCL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 };
 

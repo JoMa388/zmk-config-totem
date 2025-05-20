@@ -160,7 +160,7 @@
         };
         combo_rbkt {
             timeout-ms = <18>;
-            bindings = <&kp LBKT >;
+            bindings = <&kp RBKT >;
             key-positions = <28 29>;
             layers = <0 1 >; 
             require-prior-idle-ms = <150>;
