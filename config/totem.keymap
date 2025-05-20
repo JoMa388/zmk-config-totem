@@ -35,7 +35,7 @@
             label = "DELETE_LINE";
         };
     };
-
+}
 
     keymap {
         compatible = "zmk,keymap";
