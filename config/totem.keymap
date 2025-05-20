@@ -62,7 +62,7 @@
                   &kp Q        &kp W        &kp F          &kp P         &kp B                  &kp J            &kp L         &kp U           &kp Y        &kp DOUBLE_QUOTES
                   &hml LGUI A  &hml LALT R  &hml LSHFT S   &hml LCTRL T  &kp G                  &kp M            &hmr RCTRL N  &hmr RSHFT E    &hmr RALT I  &hmr RGUI O
 &hml LCTRL ESCAPE &kp Z        &kp X        &kp C          &kp D         &kp V                  &kp K            &kp H         &comma_morph    &dot_morph   &q_excl          &kp SEMI
-                                            &kp TAB        &num_dance    &lt 1 SPACE            &lt 2 BACKSPACE  &kp ENTER     &kp RIGHT_GUI
+                                            &kp TAB        &num_dance    &kp SPACE              &lt 1 BSPC       &kp ENTER     &kp RIGHT_GUI
             >;
         };
 
@@ -85,10 +85,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                  &kp EXCL      &kp AT        &kp LS(TAB)   &swapper      &kp PERCENT           &kp UNDER         &kp AMPS        &kp ASTRK             &kp GRAVE              &kp TILDE
-                  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE
-&swapper          &kp NUMBER_6  &kp N7        &kp N8        &kp N9        &kp N0                &kp MINUS         &kp PLUS        &kp EQUAL             &kp GREATER_THAN       &kp BSLH         &kp RIGHT_BRACKET
-                                              &kp C_VOL_UP  &kp C_VOL_DN  &trans                &mo 3             &Delete_Line    &kp DELETE
+                    &trans        &trans        &kp LS(TAB)   &swapper      &trans           &trans        &trans          &trans          &trans        &trans     
+                    &trans        &trans        &trans        &trans        &trans           &kp LEFT      &kp DOWN        &kp UP          &kp RIGHT     &trans      
+    &kp LA(F4)      &trans        &trans        &trans        &trans        &trans           &trans        &trans          &trans          &trans        &trans         &trans
+                                                &trans        &trans        &mo 3            &none         &Delete_Line    &trans
             >;
         };
 
