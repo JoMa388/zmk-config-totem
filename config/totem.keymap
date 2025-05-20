@@ -55,13 +55,13 @@
         nav {
             bindings = <
                //╭──────────────┬─────────────┬─────────────┬─────────────┬─────────────╮  ╭─────────────┬───────────────┬───────────────┬─────────────┬──────────────╮
-                    &kp trans     &kp trans     &kp LS(TAB)   &swapper     &kp trans         &kp trans     &kp trans       &kp trans       &kp trans     &kp trans 
+                    &trans        &trans        &kp LS(TAB)   &swapper      &trans           &trans        &trans          &trans          &trans        &trans 
                 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼───────────────┼───────────────┼─────────────┼──────────────┤     
-                    &kp trans     &kp trans     &kp trans     &kp trans     &kp trans        &kp LEFT      &kp DOWN        &kp UP_ARROW    &kp RIGHT     &kp trans     
+                    &trans        &trans        &trans        &trans        &trans           &kp LEFT      &kp DOWN        &kp UP          &kp RIGHT     &trans     
  //╭──────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼───────────────┼───────────────┼─────────────┼──────────────┼───────────╮ 
-    &kp LA(F4)      &kp trans     &kp trans     &kp trans     &kp trans     &kp trans        &kp trans     &kp trans       &kp trans       &kp trans     &kp trans     &kp trans
+    &kp LA(F4)      &trans        &trans        &trans        &trans        &trans           &trans        &trans          &trans          &trans        &trans         &trans
  //╰──────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼───────────────┼───────────────┼─────────────┴──────────────┴───────────╯
-                                                &kp trans     &kp trans     &mo 3            &kp none      &Delete_Line    &kp trans
+                                                &trans        &trans        &mo 3            &kp none      &Delete_Line    &trans
 //                                            ╰─────────────┴─────────────┴─────────────╯  ╰─────────────┴───────────────┴───────────────╯
             >;
         };
@@ -78,13 +78,13 @@
         sys {
             bindings = <
                //╭──────────────┬─────────────┬─────────────┬─────────────┬─────────────╮  ╭─────────────┬───────────────┬───────────────┬─────────────┬──────────────╮
-                    &kp trans     &kp trans     &kp LS(TAB)   &swapper      &kp trans        &kp trans     &kp trans       &kp trans       &kp trans     &kp trans 
+                    &trans        &trans        &kp LS(TAB)   &swapper      &trans           &trans        &trans          &trans          &trans        &trans 
                 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼───────────────┼───────────────┼─────────────┼──────────────┤     
-                    &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0     &kp trans     &kp trans       &kp trans       &kp trans     &kp trans     
+                    &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0     &trans        &trans          &trans          &trans        &trans     
  //╭──────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼───────────────┼───────────────┼─────────────┼──────────────┼───────────╮ 
-    &bootloader     &kp trans     &kp trans     &kp trans     &kp trans     &kp trans        &kp trans     &kp trans       &kp trans       &kp trans     &kp trans     &bootloader
+    &bootloader     &trans        &trans        &trans        &trans        &trans           &trans        &trans          &trans          &trans        &trans        &bootloader
  //╰──────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼───────────────┼───────────────┼─────────────┴──────────────┴───────────╯
-                                                &kp trans     &kp trans     &kp none         &kp none      &bt BT_CLR_ALL  &kp trans
+                                                &trans        &trans        &kp none         &kp none      &bt BT_CLR_ALL  &trans
 //                                            ╰─────────────┴─────────────┴─────────────╯  ╰─────────────┴───────────────┴───────────────╯
             >;
         };
