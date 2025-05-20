@@ -60,7 +60,7 @@
         dot_morph: dot_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "DOT_MORPH";
-            bindings = <&kp COMMA>, <&colon_greaterthan>;
+            bindings = <&kp DOT>, <&colon_greaterthan>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
