@@ -12,7 +12,7 @@
             #binding-cells = <0>;
 
             tapping-term-ms = <200>;
-            bindings = <&num_word 1>, <&sl 1>;
+            bindings = <&num_word 5>, <&sl 5>;
         };
         smart_num: mod_tap {
             compatible = "zmk,behavior-hold-tap";
