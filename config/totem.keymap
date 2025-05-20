@@ -40,6 +40,7 @@
     keymap {
         compatible = "zmk,keymap";
         base_layer {
+            label = "BASE";
             bindings = <
                //╭──────────────┬─────────────┬─────────────┬─────────────┬─────────────╮  ╭─────────────┬───────────────┬───────────────┬─────────────┬──────────────╮
                     &kp Q         &kp W         &kp F         &kp P         &kp              &kp J         &kp L           &kp U           &kp Y         &kp DQT
