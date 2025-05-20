@@ -1,3 +1,7 @@
+// Mouse Movement
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
+
 #define BASE 0
 #define NAV  1
 #define SYM  2
@@ -8,8 +12,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
-
-#include "includes/mouse.dtsi"
+#include <dt-bindings/zmk/pointing.h>
 #include "includes/mod.dtsi"
 #include "includes/combos.dtsi"
 #include "includes/smartnum.dtsi"
@@ -19,7 +22,7 @@
     flavor= "balanced";
     tapping-term-ms=<200>;
     quick-tap-ms=<175>;
-}
+};
 
 / {
     macros {
