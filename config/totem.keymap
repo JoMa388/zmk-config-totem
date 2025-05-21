@@ -33,6 +33,7 @@
 #include "includes/combos.dtsi"
 #include "includes/smartnum.dtsi"
 #include "includes/tristate.dtsi"
+#include "includes/adaptivekey.dtsi"
 
 &lt {
     flavor= "balanced";
@@ -85,7 +86,7 @@
                //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤  ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤  
                    &trans         &trans         &trans          &trans        &trans            &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT      &trans
 //╭──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤  ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────╮ 
-   &kp LA(F4)      &trans         &trans         &trans          &trans        &trans            &trans         &trans         &trans         &trans         &trans         &trans
+   &kp LALT(F4)      &trans         &trans         &trans          &trans        &trans            &trans         &trans         &trans         &trans         &trans         &trans
 //╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤  ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
                                                  ___             ___           &mo 3             XXX            &Delete_Line   &trans
 //                                             ╰──────────────┴──────────────┴──────────────╯  ╰──────────────┴──────────────┴──────────────╯                                       
