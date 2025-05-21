@@ -6,7 +6,7 @@
             bindings = <&sk LSHFT>;
 
             repeat {
-                trigger-keys = <&kp A>;
+                trigger-keys = <A B C>;
                 bindings = <&key_repeat>;
                 max-prior-idle-ms = <1200>;
                 strict-modifiers;
