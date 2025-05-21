@@ -4,9 +4,10 @@
 
 #define BASE 0
 #define NAV  1
-#define SYM  2
-#define ADJ  3
-#define NUM  4
+#define NUM  2
+#define SYM  3
+#define ADJ  4
+
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -69,17 +70,19 @@
 //                                             ╰──────────────┴──────────────┴──────────────╯╰──────────────┴──────────────┴──────────────╯                                       
             >;
         };
-
-        sim_layer {
-            label = "SYM";
+        num {
             bindings = <
-         &kp F1   &kp F2          &kp F3          &kp F4           &kp F5       &kp F6          &kp F7          &kp F8        &kp F9           &kp TILDE
-         &kp F11  &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_RIGHT  &trans       &kp LEFT        &kp DOWN        &kp UP_ARROW  &kp RIGHT        &trans
-&kp F10  &kp F12  &trans          &mmv MOVE_DOWN  &trans           &trans       &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &kp PIPE   &trans
-                                  &mkp RCLK       &mkp MCLK        &mkp LCLK    &none           &trans          &none
+               //╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
+                   &trans         &trans         &trans          &trans        &trans          &trans         &trans         &trans         &trans         &trans
+               //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤  
+                   &kp N1         &kp N2         &kp N3          &kp N4        &kp N5          &trans         &trans         &trans         &trans         &trans
+//╭──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────╮ 
+   &trans          &kp N6         &kp N7         &kp N8          &kp N9        &kp N0          &trans         &trans         &trans         &trans         &trans         &trans
+//╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
+                                                 &trans          &trans        &trans          &trans         &trans         &trans
+//                                             ╰──────────────┴──────────────┴──────────────╯╰──────────────┴──────────────┴──────────────╯  
             >;
         };
-
         layer_3 {
             bindings = <
                //╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
@@ -94,13 +97,6 @@
             >;
         };
 
-        num {
-            bindings = <
-             &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans          &trans  &trans
-             &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &trans  &trans  &trans          &trans  &trans
-&trans       &kp N6        &kp N7        &kp N8        &kp N9        &kp N0          &trans  &trans  &trans          &trans  &trans      &trans
-                                         &trans        &trans        &trans          &trans  &trans  &trans
-            >;
-        };
+// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄     
     };
 };
