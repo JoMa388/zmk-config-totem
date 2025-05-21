@@ -29,6 +29,7 @@
 #include "includes/combos.dtsi"
 #include "includes/smartnum.dtsi"
 #include "includes/tristate.dtsi"
+#include "includes/adaptivekey.dtsi"
 
 &lt {
     flavor= "balanced";
@@ -67,7 +68,7 @@
             >;
         };
 
-        number {
+        nav {
             label = "NAVI";
             bindings = <
                //╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
