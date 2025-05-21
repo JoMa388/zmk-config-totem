@@ -19,6 +19,8 @@
 #define MS_SCRU  &msc SCRL_UP
 #define MS_SCRD  &msc SCRL_DOWN
 
+#define SMART_NUM   &smart_num NUM 0
+#define MAGIC_SHIFT &magic_shift LSHFT 0
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -63,7 +65,7 @@
 //╭──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────╮ 
    &hml LCTRL ESC  &kp Z          &kp X          &kp C          &kp D          &kp V           &kp K          &kp H          &comma_morph   &dot_morph     &q_excl        &kp SEMI
 //╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
-                                                 &kp TAB        &num_dance     &kp SPACE       &lt 1 BSPC     &kp ENTER      &kp RIGHT_GUI
+                                                 &kp TAB        SMART_NUM      &kp SPACE       &lt 1 BSPC     &kp ENTER      MAGIC_SHIFT
 //                                             ╰──────────────┴──────────────┴──────────────╯╰──────────────┴──────────────┴──────────────╯
             >;
         };
@@ -83,6 +85,7 @@
             >;
         };
         num {
+            label = "NUM";
             bindings = <
                //╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
                    &trans         &trans         &trans          &trans        &trans          &trans         &trans         &trans         &trans         &trans
