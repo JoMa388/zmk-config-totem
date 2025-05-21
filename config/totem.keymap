@@ -2,11 +2,11 @@
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
 
-#define BASE 0
-#define NAV  1
-#define NUM  2
-#define SYM  3
-#define ADJ  4
+#define BASE  0
+#define NAV   1
+#define NUM   2
+#define SYM   3
+#define MOUSE 4
 
 // mouse definitions
 #define MS_UP    &mmv MOVE_UP
