@@ -12,7 +12,7 @@
             compatible = "zmk,behavior-tri-state";
             #binding-cells = <0>;
             bindings = <&tog MOUSE>, <&none>, <&tog MOUSE>;
-            ignored-key-positions= <1 2 3 10 11 12 13 14 21 22 23 32 33>;
+            ignored-key-positions= <1 2 3 10 11 12 13 14 22 23 24 33 34>;
             ignored-layers =<MOUSE NAV>;
         };
     };

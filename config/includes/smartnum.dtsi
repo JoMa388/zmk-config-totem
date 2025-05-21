@@ -3,17 +3,12 @@
 #include <behaviors/num_word.dtsi>
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
+
+// Tap: num-word | double-tap: sticky num-layer | Hold: num-layer.
+#define SMART_NUM   &smart_num NUM 0
 
 / {
     behaviors {
-        num_dance: num_dance {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-
-            tapping-term-ms = <200>;
-            bindings = <&num_word NUM>, <&sl NUM>;
-        };
         smart_num: mod_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -22,6 +17,13 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             bindings = <&mo>, <&num_dance>;
+        };
+        num_dance: num_dance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+
+            tapping-term-ms = <200>;
+            bindings = <&num_word NUM>, <&sl NUM>;
         };
     };
 };

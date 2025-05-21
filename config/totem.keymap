@@ -19,8 +19,8 @@
 #define MS_SCRU  &msc SCRL_UP
 #define MS_SCRD  &msc SCRL_DOWN
 
-#define SMART_NUM   &smart_num NUM 0
-#define MAGIC_SHIFT &magic_shift LSHFT 0
+
+
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
