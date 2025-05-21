@@ -6,8 +6,8 @@ manifest:
       url-base: https://github.com/urob
     - name: dhruvinsh
       url-base: https://github.com/dhruvinsh
-    - name: urob
-      url-base: https://github.com/urob  
+    - name: JoMa388
+      url-base: https://github.com/JoMa388  
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -21,6 +21,9 @@ manifest:
       revision: main
     - name: zmk-adaptive-key
       remote: urob
+      revision: main
+    - name: zmk
+      remote: JoMa388
       revision: main
   self:
     path: config
