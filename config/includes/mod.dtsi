@@ -28,7 +28,7 @@
         };
 
 
-        // Tap: comma | Shift + tap: semicolon | Ctrl + shift + tap: <.
+        // Tap: comma | Shift + tap: semicolon | Ctrl + shift + tap: <
         semi_lessthan: semi_lessthan {
             compatible = "zmk,behavior-mod-morph";
             label = "Semi_<";
@@ -47,7 +47,7 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        // Tap: dot | Shift + tap: colon | Ctrl + shift + tap: >.
+        // Tap: dot | Shift + tap: colon | Ctrl + shift + tap: >
         colon_greaterthan: colo_greaterthan {
             compatible = "zmk,behavior-mod-morph";
             label = "Colon_>";
@@ -66,7 +66,7 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-
+        // Tap: ? | Shift + tap: ! 
         q_excl: question_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "QUESTION_MORPH";
