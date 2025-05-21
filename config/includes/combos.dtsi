@@ -180,14 +180,6 @@
             require-prior-idle-ms = <150>;
         };
 
-        // Smart Mouse
-        combo_mouse {
-            timeout-ms = <18>;
-            bindings = <&smart_mouse >;
-            key-positions = <2 3>;
-            layers = <0 1 >; 
-            require-prior-idle-ms = <150>;
-        };
         // backspace
         bspc {
             timeout-ms = <18>;
