@@ -79,10 +79,20 @@
         magic_shift_tap: magic_shift_tap  {
             compatible = "zmk,behavior-mod-morph";
             label = "MAGIC_SHIFT_TAP";
-            bindings = <&shift_repeat>, <&caps_word>;
+            bindings = <&shift_repeat>, <&caps_word 0>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        magic_shift: magic_shift {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&magic_shift_tap>;
         };
     };
 };

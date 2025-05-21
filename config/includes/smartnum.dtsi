@@ -23,5 +23,11 @@
             quick-tap-ms = <175>;
             bindings = <&mo>, <&num_dance>;
         };
+
+        caps_word: caps_word {
+            compatible ="zmk,behavior-auto-layer";
+            #binding-cells =<1>;
+            ignore-alphas; 
+        }
     };
 };
