@@ -8,6 +8,17 @@
 #define SYM  3
 #define ADJ  4
 
+// mouse definitions
+#define MS_UP    &mmv MOVE_UP
+#define MS_LEFT  &mmv MOVE_LEFT
+#define MS_RIGHT &mmv MOVE_RIGHT
+#define MS_DOWN  &mmv MOVE_DOWN
+// scroll
+#define MS_SCRL  &msc SCRL_LEFT
+#define MS_SCRR  &msc SCRL_RIGHT
+#define MS_SCRU  &msc SCRL_UP
+#define MS_SCRD  &msc SCRL_DOWN
+
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -83,7 +94,7 @@
 //                                             ╰──────────────┴──────────────┴──────────────╯╰──────────────┴──────────────┴──────────────╯  
             >;
         };
-        layer_3 {
+        system {
             bindings = <
                //╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
                    &trans         &trans         &trans          &trans        &trans          &trans         &trans         &trans         &trans         &bt BT_CLR
@@ -93,6 +104,19 @@
    &bootloader     &trans         &trans         &trans          &trans        &trans          &trans         &trans         &trans         &trans         &trans         &bootloader
 //╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
                                                  &trans          &trans        &mo 3           &trans         &bt BT_CLR_ALL &trans
+//                                             ╰──────────────┴──────────────┴──────────────╯╰──────────────┴──────────────┴──────────────╯
+            >;
+        };
+        mouse {
+            bindings = <
+               //╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
+                   &trans         &kp PG_DN      MS_UP           &kp PG_UP     &trans          &trans         &trans         &trans         &trans         &trans
+               //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤  
+                   MS_SCRL        &MS_LEFT       MS_DOWN         MS_RIGHT      MS_SCRR         &trans         &trans         &trans         &trans         &trans
+//╭──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────╮ 
+   &bootloader     &trans         &mkp RCLK      &mkp MCLK       &mkp LCLK     &trans          &trans         &trans         &trans         &trans         &trans         &bootloader
+//╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
+                                                 &trans          MS_SCRD       MS_SCRU         &trans         &trans         &trans
 //                                             ╰──────────────┴──────────────┴──────────────╯╰──────────────┴──────────────┴──────────────╯
             >;
         };
