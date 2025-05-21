@@ -20,7 +20,7 @@
         magic_shift_tap: magic_shift_tap  {
             compatible = "zmk,behavior-mod-morph";
             label = "MAGIC_SHIFT_TAP";
-            bindings = <&shift_repeat>, <&caps_word;
+            bindings = <&shift_repeat>, <&caps_word>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
