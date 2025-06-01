@@ -54,10 +54,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp X  &kp M    &kp G    &kp J  &kp COMMA    &kp DOT   &kp Q     &kp DQT
-&kp C  &kp S  &kp N    &kp T    &kp D  &kp SEMI     &kp A     &kp E     &kp I    &kp H
-&kp P  &kp F  &kp L    &kp D    &kp V  &kp MINUS    &kp U     &kp O     &kp Y    &kp B
-              &kp TAB  &kp TAB  &kp R  &lt SYM RET  &kp BSPC  &kp BSPC
+       &kp X  &kp M    &kp G    &kp J  &kp COMMA  &kp DOT   &kp Q     &kp DQT
+&kp C  &kp S  &kp N    &kp T    &kp D  &kp SEMI   &kp A     &kp E     &kp I    &kp H
+&kp P  &kp F  &kp L    &kp D    &kp V  &kp MINUS  &kp U     &kp O     &kp Y    &kp B
+              &kp TAB  &kp TAB  &kp R  &kp SPACE  &kp BSPC  &kp BSPC
             >;
         };
     };
