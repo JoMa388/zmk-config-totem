@@ -20,7 +20,17 @@
         combo_esc {
             timeout-ms = <50>;
             key-positions = <0 1>;
-            bindings = <&kp ESC>;
+            bindings = <&kp W>;
+        };
+
+        z {
+            bindings = <&kp Z>;
+            key-positions = <7 6>;
+        };
+
+        bspc {
+            bindings = <&kp BSPC>;
+            key-positions = <29 30>;
         };
     };
 
@@ -44,10 +54,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &kp W       &kp F        &kp B        &kp G          &kp J        &kp L        &kp U        &kp Y
-&mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp D          &kp H        &mt RSHFT N  &mt RCTRL E  &mt RALT I  &mt RGUI O
-&kp Z       &kp X       &kp C        &kp V        &kp B          &kp K        &kp M        &kp COMMA    &kp DOT     &kp FSLH
-                        &kp TAB      &kp TAB      &lt NAV SPACE  &lt SYM RET  &kp BSPC     &kp BSPC
+       &kp X  &kp M    &kp G    &kp J  &kp COMMA    &kp DOT   &kp Q     &kp DQT
+&kp C  &kp S  &kp N    &kp T    &kp D  &kp SEMI     &kp A     &kp E     &kp I    &kp H
+&kp P  &kp F  &kp L    &kp D    &kp V  &kp MINUS    &kp U     &kp O     &kp Y    &kp B
+              &kp TAB  &kp TAB  &kp R  &lt SYM RET  &kp BSPC  &kp BSPC
             >;
         };
     };
