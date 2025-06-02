@@ -35,6 +35,14 @@
         };
     };
 
+    behaviors {
+        softOff: softOff {
+            compatible = "zmk,behavior-soft-off";
+            label = "SOFTOFF";
+            #binding-cells = <0>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -68,9 +76,9 @@
 
         layer_3 {
             bindings = <
-                &soft_off     &trans        &trans        &bootloader     &bootloader  &trans  &trans  &bt BT_CLR 
-  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0    &trans       &trans  &trans  &trans  &trans
-  &trans        &trans        &trans        &trans        &trans          &trans       &trans  &trans  &trans  &trans
+                &softOff      &trans        &trans        &bootloader     &bootloader  &trans  &trans  &bt BT_CLR
+  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0    &trans       &trans  &trans  &trans      &trans
+  &trans        &trans        &trans        &trans        &trans          &trans       &trans  &trans  &trans      &trans
                               &trans        &trans        &trans          &trans       &trans  &trans
             >;
         };
