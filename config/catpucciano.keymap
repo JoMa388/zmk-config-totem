@@ -40,10 +40,10 @@
 
         Base {
             bindings = <
-         &kp W  &kp D    &kp L  &kp X         &kp SEMI     &kp U      &kp O      &kp Y
-  &kp C  &kp S  &kp N    &kp T  &kp K         &kp COMMA    &kp A      &kp E      &kp I     &kp H
-  &kp P  &kp F  &kp G    &kp M  &kp J         &kp DOT      &kp MINUS  &kp V      &kp FSLH  &kp SQT
-                &kp ESC  &kp R  &lt 1 BSPC    &lt 2 SPACE  &kp B      &kp ENTER
+         &kp W  &kp D    &kp J  &kp X         &kp SEMI     &kp U  &kp O      &kp Y
+  &kp C  &kp S  &kp N    &kp T  &kp K         &kp COMMA    &kp A  &kp E      &kp I     &kp H
+  &kp P  &kp F  &kp G    &kp M  &kp V         &kp DOT      &kp L  &kp MINUS  &kp FSLH  &kp SQT
+                &kp ESC  &kp R  &lt 1 BSPC    &lt 2 SPACE  &kp B  &kp ENTER
             >;
         };
 
