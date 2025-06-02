@@ -30,7 +30,7 @@
 
 
     kscan0: kscan_0 {   
-        compatible = "zmk,kscan-gpio-matrix"; wakeup-source;
+        compatible = "zmk,kscan-gpio-matrix";
         label = "KSCAN";
         
         diode-direction = "col2row"; 
@@ -41,13 +41,9 @@
             , <&xiao_d 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
     };
-
-
-    keys {
-        compatible ="gpio-keys";
-        wakeup_key: wakeup_key {
-            gpios = <&xiao_d 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
-        };
-    };
+    soft_off_wakers {
+        compatible ="zmk,soft-off-wakeup-sources";
+        wakeup-sources = <&kscan0>;
+    }
 };
 
