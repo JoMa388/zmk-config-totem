@@ -25,16 +25,7 @@
 };
 
 / {
-    behaviors {
-        esc_lalt: tap_dance {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp ESC>, <&kp LALT>;
-        };
-    };
 
-    
     keymap {
         compatible = "zmk,keymap";
 
@@ -43,7 +34,7 @@
                &kp F           &kp L           &kp P         &kp B        &kp SEMI     &kp SQT        &kp X          &q_excl
   &hml LGUI C  &hml LALT  S    &hml LSHFT N    &hml LCTRL T  &kp G        &kp COMMA    &hmr RCTL A    &hmr RSHFT E   &hmr RALT I   &hmr RGUI H
   &kp W        &kp J           &kp M           &kp D         &kp V        &kp DOT      &kp U          &kp O          &kp Y         &kp K
-                               &esc_lalt       &kp R         &lt 1 TAB    &lt 2 SPACE  &kp ENTER      &kp DEL
+                               &kp ESC         &kp R         &lt 1 TAB    &lt 2 SPACE  &kp ENTER      &kp DEL
             >;
         };
 
