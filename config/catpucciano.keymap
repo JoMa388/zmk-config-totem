@@ -29,10 +29,10 @@
 
         Base {
             bindings = <
-               &kp Q           &kp L           &kp P         &kp B        &kp SEMI     &kp SQT        &kp X          &q_excl
-  &hml LGUI C  &hml LALT  S    &hml LSHFT N    &hml LCTRL T  &kp F        &kp COMMA    &hmr RCTL A    &hmr RSHFT E   &hmr RALT I   &hmr RGUI H
+               &kp F           &kp L           &kp P         &kp B        &kp SEMI     &kp SQT        &kp X          &q_excl
+  &hml LGUI C  &hml LALT  S    &hml LSHFT N    &hml LCTRL T  &kp G        &kp COMMA    &hmr RCTL A    &hmr RSHFT E   &hmr RALT I   &hmr RGUI H
   &kp W        &kp J           &kp M           &kp D         &kp V        &kp DOT      &kp U          &kp O          &kp Y         &kp K
-                               &kp ESC         &kp R         &lt 1 TAB    &lt 2 SPACE  &kp G          &kp DEL
+                               &kp ESC         &kp R         &lt 1 TAB    &lt 2 SPACE  &kp ENTER      &kp DEL
             >;
         };
 
