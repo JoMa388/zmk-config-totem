@@ -28,18 +28,18 @@
 
         Base {
             bindings = <
-               &kp W           &kp L           &kp P         &kp B       &kp SEMI     &kp U          &kp O          &kp Y
+               &kp W           &kp L           &kp P         &kp B        &kp SEMI     &kp U          &kp O          &kp Y
   &hml LGUI C  &hml LALT  S    &hml LSHFT N    &hml LCTRL T  &kp J        &kp COMMA    &hmr RCTL A    &hmr RALT E    &hmr RGUI I     &kp H
-  &kp G        &kp F           &kp M           &kp D         &kp V        &kp DOT      &kp SQT        &kp X          &q_excl         &kp K
-                               &hml ESC TAB    &kp R         &lt 1 BSPC   &lt 2 SPACE  &kp ENTER      &kp DEL
+  &kp Q        &kp F           &kp M           &kp D         &kp V        &kp DOT      &kp SQT        &kp X          &q_excl         &kp K
+                               &kp ESC         &kp R         &lt 1 TAB    &lt 2 SPACE  &kp ENTER      &kp G
             >;
         };
 
-        Num {
+        Num 
             bindings = <
           &kp AT  &kp HASH  &swapper  &kp PRCNT    &kp CARET  &kp AMPS              &kp ASTRK              &kp GRAVE
-  &kp N1  &kp N2  &kp N3    &kp N4    &kp N5       &trans     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-  &kp N6  &kp N7  &kp N8    &kp N9    &kp N0       &trans     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp BSLH          &trans
+  &kp N4  &kp N3  &kp N2    &kp N1    &kp N9       &trans     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+  &kp N6  &kp N7  &kp N8    &kp N0    &kp N5       &trans     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp BSLH          &trans
                   &trans    &trans    &none        &mo 3      &trans                &trans
             >;
         };
