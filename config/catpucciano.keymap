@@ -23,6 +23,14 @@
     tapping-term-ms=<200>;
     quick-tap-ms=<175>;
 };
+behaviors {
+        esc_lalt: tap_dance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp ESC>, <&kp LALT>;
+        };
+    };
 / {
     keymap {
         compatible = "zmk,keymap";
