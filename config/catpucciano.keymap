@@ -23,48 +23,19 @@
     quick-tap-ms=<175>;
 };
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&kp Q>;
-        };
-
-        z {
-            bindings = <&kp Z>;
-            key-positions = <7 6>;
-        };
-
-        bspc {
-            bindings = <&kp BSPC>;
-            key-positions = <29 30>;
-        };
-    };
-
-    behaviors {
-        softOff: softOff {
-            compatible = "zmk,behavior-soft-off";
-            label = "SOFTOFF";
-            #binding-cells = <0>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
         Base {
             bindings = <
-               &kp W           &kp M           &kp P         &kp B        &kp SEMI     &kp U          &kp O          &kp Y
+               &kp W           &kp L           &kp P         &kp B       &kp SEMI     &kp U          &kp O          &kp Y
   &hml LGUI C  &hml LALT  S    &hml LSHFT N    &hml LCTRL T  &kp J        &kp COMMA    &hmr RCTL A    &hmr RALT E    &hmr RGUI I     &kp H
-  &kp G        &kp F           &kp L           &kp D         &kp V        &kp DOT      &kp SQT        &kp X          &q_excl         &kp K
+  &kp G        &kp F           &kp M           &kp D         &kp V        &kp DOT      &kp SQT        &kp X          &q_excl         &kp K
                                &hml ESC TAB    &kp R         &lt 1 BSPC   &lt 2 SPACE  &kp ENTER      &kp DEL
             >;
         };
 
         Num {
-            label = "BASE";
             bindings = <
           &kp AT  &kp HASH  &swapper  &kp PRCNT    &kp CARET  &kp AMPS              &kp ASTRK              &kp GRAVE
   &kp N1  &kp N2  &kp N3    &kp N4    &kp N5       &trans     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
@@ -84,7 +55,7 @@
 
         layer_3 {
             bindings = <
-                &softOff      &trans        &trans        &bootloader     &bootloader  &trans  &trans  &bt BT_CLR
+                &trans     &trans        &trans        &bootloader     &bootloader  &trans  &trans  &bt BT_CLR
   &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0    &trans       &trans  &trans  &trans      &trans
   &trans        &trans        &trans        &trans        &trans          &trans       &trans  &trans  &trans      &trans
                               &trans        &trans        &trans          &trans       &trans  &trans
