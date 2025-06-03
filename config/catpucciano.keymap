@@ -7,9 +7,9 @@
 #define SYM  2
 #define ADJ  3
 
-#include "includes/mod.dtsi"
+#include "includes/mods.dtsi"
 #include "includes/combos.dtsi"
-
+#include "includes/tristate.dtsi"
 &mt {
     quick-tap-ms = <100>;
     global-quick-tap;
@@ -56,9 +56,9 @@
 
         Base {
             bindings = <
-               &kp W           &kp L           &kp P         &kp B        &kp SEMI     &kp U          &kp O          &kp Y
+               &kp W           &kp M           &kp P         &kp B        &kp SEMI     &kp U          &kp O          &kp Y
   &hml LGUI C  &hml LALT  S    &hml LSHFT N    &hml LCTRL T  &kp J        &kp COMMA    &hmr RCTL A    &hmr RALT E    &hmr RGUI I     &kp H
-  &kp G        &kp F           &kp M           &kp D         &kp V        &kp DOT      &kp SQT        &kp X          &q_excl         &kp K
+  &kp G        &kp F           &kp L           &kp D         &kp V        &kp DOT      &kp SQT        &kp X          &q_excl         &kp K
                 &kp ESC  &kp R  &lt 1 BSPC    &lt 2 SPACE  &kp ENTER  &kp RIGHT_GUI
             >;
         };
