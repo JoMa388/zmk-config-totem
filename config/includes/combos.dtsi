@@ -222,6 +222,9 @@
             key-positions = <28 29>;
             layers = <0 1 >; 
         };
+
+
+        
         combo_bspc {
             timeout-ms = <30>;
             bindings = <&kp BSPC>;

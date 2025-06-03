@@ -10,6 +10,7 @@
 #include "includes/mods.dtsi"
 #include "includes/combos.dtsi"
 #include "includes/tristate.dtsi"
+
 &mt {
     quick-tap-ms = <100>;
     global-quick-tap;
@@ -28,14 +29,14 @@
 
         Base {
             bindings = <
-               &kp W           &kp L           &kp P         &kp B        &kp SEMI     &kp U          &kp O          &kp Y
-  &hml LGUI C  &hml LALT  S    &hml LSHFT N    &hml LCTRL T  &kp J        &kp COMMA    &hmr RCTL A    &hmr RALT E    &hmr RGUI I     &kp H
-  &kp Q        &kp F           &kp M           &kp D         &kp V        &kp DOT      &kp SQT        &kp X          &q_excl         &kp K
+               &kp J           &kp L           &kp P         &kp B        &kp SEMI     &kp U          &kp O          &kp Y
+  &hml LGUI C  &hml LALT  S    &hml LSHFT N    &hml LCTRL T  &kp F        &kp COMMA    &hmr RCTL A    &hmr RALT E    &hmr RGUI I     &kp H
+  &kp W        &kp Q           &kp M           &kp D         &kp V        &kp DOT      &kp SQT        &kp X          &q_excl         &kp K
                                &kp ESC         &kp R         &lt 1 TAB    &lt 2 SPACE  &kp ENTER      &kp G
             >;
         };
 
-        Num 
+        Num {
             bindings = <
           &kp AT  &kp HASH  &swapper  &kp PRCNT    &kp CARET  &kp AMPS              &kp ASTRK              &kp GRAVE
   &kp N4  &kp N3  &kp N2    &kp N1    &kp N9       &trans     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
