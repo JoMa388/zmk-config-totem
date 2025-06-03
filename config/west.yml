@@ -25,5 +25,8 @@ manifest:
     - name: zmk-fork
       remote: JoMa388
       revision: main
+    - name: zmk-helpers
+      remote: urob
+      revision: main  
   self:
     path: config
