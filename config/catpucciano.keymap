@@ -161,13 +161,13 @@ SIMPLE_MORPH(qexcl, SFT, &kp QMARK, &kp EXCL)
 
 ZMK_BASE_LAYER(Base,
 //                              ╭──────────────┬──────────────┬──────────────┬──────────────╮╭──────────────┬──────────────┬──────────────┬──────────────╮
-                                  &kp F          &kp L          &kp P          &kp B        ,  &kp SEMI       &kp SQT        &kp X          &qexcl       ,
+                                  &kp W          &kp L          &kp P          &kp B        ,  &kp SEMI       &kp SQT         &kp K          &kp X        ,
 //               ╭──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┼──────────────╮  
                    &hml LGUI C    &hml LALT S    &hml LSHFT N   &hml LCTRL T   &kp G        ,  &kp COMMA      &hmr RCTRL A   &hmr RSHFT E   &hmr RALT I    &hmr RGUI H  ,
 //               ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ 
-                   &kp W          &kp J          &kp M          &kp D          &kp V        ,  &kp DOT        &kp U          &kp O          &kp Y          &kp K        ,  
+                   &kp Q          &kp J          &kp M          &kp D          &kp V        ,  &kp DOT        &kp U          &kp O          &kp Y          &qexcl       ,  
 //               ╰──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┴──────────────╯
-                                                 &kp ESC        &lt FN R       SMART_NUM    ,  &lt NAV SPACE  MAGIC_SHIFT    &kp ENTER      
+                                                 &kp ESC        &lt FN R       SMART_NUM    ,  &lt NAV SPACE  MAGIC_SHIFT    &kp F     
 //                                             ╰──────────────┴──────────────┴──────────────╯╰──────────────┴──────────────┴──────────────╯
 )
 
