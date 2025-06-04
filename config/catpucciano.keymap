@@ -12,8 +12,9 @@
 #define BASE  0
 #define NAV   1
 #define NUM   2
-#define SYS   3
-#define MOUSE 4
+#define FN    3
+#define SYS   4
+#define MOUSE 5
 
 #define XXX &none
 #define ___ &trans
@@ -61,6 +62,24 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
 
 &mt { MT_CORE };
 
+ZMK_HOLD_TAP(mt_home, bindings = <&masked_home>, <&kp>; MT_CORE)
+ZMK_HOLD_TAP(mt_end, bindings = <&masked_end>, <&kp>; MT_CORE)
+
+#define NAV_LEFT  &mt_home 0   LEFT  // Tap: left  | Long-tap: start of line.
+#define NAV_RIGHT &mt_end 0    RIGHT // Tap: right | Long-tap: end   of line.
+#define NAV_UP    &mt LC(HOME) UP    // Tap: up    | Long-tap: start of doc.
+#define NAV_DOWN  &mt LC(END)  DOWN  // Tap: down  | Long-tap: end   of doc.
+#define NAV_BSPC  &mt LC(BSPC) BSPC  // Tap: bspc  | Long-tap: delete word bwd.
+#define NAV_DEL   &mt LC(DEL)  DEL   // Tap: del   | Long-tap: delete word fwd.
+
+// Mask CTRL on left/right hold to avoid accidental jumps to start/end of doc.
+#define MASK_MODS(NAME, MODS, BINDING)                                         \
+  ZMK_MOD_MORPH(NAME, bindings = <BINDING>, <BINDING>; mods = <MODS>;)
+
+MASK_MODS(masked_home, (MOD_LCTL), &kp HOME)
+MASK_MODS(masked_end,  (MOD_LCTL), &kp END)
+
+
 /* Magic-shift & auto-layers */
 
 // Tap: repeat after alpha, else sticky-shift |
@@ -88,7 +107,9 @@ ZMK_ADAPTIVE_KEY(
 };
 
 // Tap: num-word | double-tap: sticky num-layer | Hold: num-layer.
+
 #define SMART_NUM &smart_num NUM 0
+
 ZMK_HOLD_TAP(smart_num, bindings = <&mo>, <&num_dance>; flavor = "balanced";
              tapping-term-ms = <200>; quick-tap-ms = <QUICK_TAP_MS>;)
 ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
@@ -98,7 +119,7 @@ ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
 ZMK_TRI_STATE(
     smart_mouse, bindings = <&tog MOUSE>, <&none>, <&tog MOUSE>;
     ignored-key-positions =
-        <LT2 LM1 LM2 LM3>;
+        <LT1 LT2 LT3 LM0 LM1 LM2 LM3 LM4 LB1 LB2 LB3 LH0 LH1>;
     ignored-layers = <MOUSE NAV>;)
 
 // Alt+Tab swapper, requires tri-state module.
@@ -115,6 +136,20 @@ ZMK_MOD_MORPH(NAME, mods = <(MOD_L##MOD | MOD_R##MOD)>;                      \
 SIMPLE_MORPH(qexcl, SFT, &kp QMARK, &kp EXCL)
 
 
+// Misc aliases
+#define CANCEL    &kp K_CANCEL            // Cancel caps-word & auto-layers.
+
+// DisplayFusion
+#define MEH0 &kp LC(LS(LA(N0)))
+#define MEH1 &kp LC(LS(LA(N1)))
+#define MEH2 &kp LC(LS(LA(N2)))
+#define MEH3 &kp LC(LS(LA(N3)))
+#define MEH4 &kp LC(LS(LA(N4)))
+#define MEH5 &kp LC(LS(LA(N5)))
+#define MEH6 &kp LC(LS(LA(N6)))
+#define MEH7 &kp LC(LS(LA(N7)))
+#define MEH8 &kp LC(LS(LA(N8)))
+#define MEH9 &kp LC(LS(LA(N9)))
 
 /* Keymap */
 
@@ -126,37 +161,49 @@ SIMPLE_MORPH(qexcl, SFT, &kp QMARK, &kp EXCL)
 
 ZMK_BASE_LAYER(Base,
 //                              ╭──────────────┬──────────────┬──────────────┬──────────────╮╭──────────────┬──────────────┬──────────────┬──────────────╮
-                                  &kp X          &kp M          &kp G          &kp J        ,  &kp SEMI       &kp DOT        &qexcl         &kp SQT      ,
+                                  &kp F          &kp L          &kp P          &kp B        ,  &kp SEMI       &kp SQT        &kp X          &qexcl       ,
 //               ╭──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┼──────────────╮  
-                   &hml LGUI C    &hml LALT S    &hml LSHFT N   &hml LCTRL T   &kp K        ,  &kp COMMA      &hmr RCTRL A   &hmr RSHFT E   &hmr RALT I    &hmr RGUI H  ,
+                   &hml LGUI C    &hml LALT S    &hml LSHFT N   &hml LCTRL T   &kp G        ,  &kp COMMA      &hmr RCTRL A   &hmr RSHFT E   &hmr RALT I    &hmr RGUI H  ,
 //               ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ 
-                   &kp P          &kp F          &kp L          &kp D          &kp V        ,  &kp MINUS      &kp U          &kp O          &kp Y          &kp B        ,  
+                   &kp W          &kp J          &kp L          &kp D          &kp V        ,  &kp DOT        &kp U          &kp O          &kp Y          &kp K        ,  
 //               ╰──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┴──────────────╯
-                                                 &kp BSPC       &kp R          &kp SPACE    ,  &kp SPACE      MAGIC_SHIFT   &kp ENTER      
+                                                 &kp ESC        &kp R          SMART_NUM    ,  &lt NAV SPACE  MAGIC_SHIFT    &kp ENTER      
 //                                             ╰──────────────┴──────────────┴──────────────╯╰──────────────┴──────────────┴──────────────╯
 )
 
 ZMK_BASE_LAYER(Nav,
 //                              ╭──────────────┬──────────────┬──────────────┬──────────────╮╭──────────────┬──────────────┬──────────────┬──────────────╮
-                                  &trans         &kp LS(TAB)     &swapper      &trans       ,  &trans         &trans         &trans         &trans       ,  
+                                  &kp LA(F4)     &trans         &trans         &trans       ,  &trans         &kp PG_DN      &kp PG_UP      NAV_DEL      ,  
 //               ╭──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┼──────────────╮  
-                   &trans         &trans         &trans          &trans        &trans       ,  &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT      &trans       ,
+                   &sk LGUI       &sk LALT       &sk LSHFT      &sk LCTRL      &trans       ,  NAV_LEFT       NAV_DOWN       NAV_UP         NAV_RIGHT      &kp RET      ,
 //               ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ 
-                   &trans         &trans         &trans          &trans        &trans       ,  &trans         &trans         &trans         &trans         &trans       ,
+                   &trans         &trans         &trans         &trans         &trans       ,  &trans         &kp TAB        &trans         &trans         &trans       ,
 //               ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┴──────────────╯
-                                                 &trans          &trans        &trans       ,  &trans         &trans         &trans
+                                                 &trans         &trans         &mo SYS      ,  ___            CANCEL         &trans
+//                                             ╰──────────────┴──────────────┴──────────────╯╰──────────────┴──────────────┴──────────────╯                                       
+)
+
+ZMK_BASE_LAYER(FN,
+//                              ╭──────────────┬──────────────┬──────────────┬──────────────╮╭──────────────┬──────────────┬──────────────┬──────────────╮
+                                  &kp C_MUTE     &kp C_VOL_DN   &kp C_VOL_UP   ___          ,  ___            ___            ___            ___          ,  
+//               ╭──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┼──────────────╮  
+                   MEH5           MEH4           MEH3           MEH2           MEH1         ,  &kp F1         &kp F2         &kp F3         &kp F4         &kp F5       ,
+//               ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ 
+                   MEH6           MEH7           MEH8           MEH9           MEH0         ,  &kp F6         &kp F7         &kp F8         &kp F9         &kp F10      ,
+//               ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┴──────────────╯
+                                                 ___            ___            ___          ,  ___            &kp F11        &kp F12           
 //                                             ╰──────────────┴──────────────┴──────────────╯╰──────────────┴──────────────┴──────────────╯                                       
 )
 
 ZMK_BASE_LAYER(Num,
-//                              ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮╭──────────────┬──────────────┬──────────────╮
-                                  &trans         &trans          &trans        &trans       ,  &trans         &trans         &trans         &trans       ,  
+//                              ╭──────────────┬──────────────┬──────────────┬──────────────╮╭──────────────┬──────────────┬──────────────┬──────────────╮
+                                  ___            ___            ___            ___          ,  ___            ___            ___            ___          ,  
                //╭──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┼──────────────╮  
-                   &kp N1         &kp N2         &kp N3          &kp N4        &kp N5       ,  &trans         &trans         &trans         &trans         &trans       ,
+                   &kp N1         &kp N2         &kp N3         &kp N4         &kp N5       ,  ___            ___            ___            ___            ___          ,
 //               ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ 
-                   &kp N6         &kp N7         &kp N8          &kp N9        &kp N0       ,  &trans         &trans         &trans         &trans         &trans       ,  
+                   &kp N6         &kp N7         &kp N8         &kp N9         &kp N0       ,  ___            ___            ___            ___            ___          ,  
 //               ╰──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┴──────────────╯
-                                                 &trans          &trans        &trans       ,  &trans         &trans         &trans
+                                                 ___            ___            ___          ,  ___            ___            ___
 //                                             ╰──────────────┴──────────────┴──────────────╯╰──────────────┴──────────────┴──────────────╯  
 )
 
@@ -164,22 +211,22 @@ ZMK_BASE_LAYER(Sys,
 //                              ╭──────────────┬──────────────┬──────────────┬──────────────╮╭──────────────┬──────────────┬──────────────┬──────────────╮
                                   &trans         &trans          &trans        &bootloader  ,  &bootloader    &trans         &trans         &bt BT_CLR   ,
 //               ╭──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┼──────────────╮  
-                   &bt BT_SEL 4   &bt BT_SEL 3   &bt BT_SEL 2    &bt BT_SEL 1  &bt BT_SEL 0 ,  &trans         &trans         &trans         &trans         &trans       ,
+                   &bt BT_SEL 4   &bt BT_SEL 3   &bt BT_SEL 2    &bt BT_SEL 1  &bt BT_SEL 0 ,  ___            ___            ___            ___            ___          ,
 //               ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-                   &trans         &trans          &trans        &trans          &trans      ,  &trans         &trans         &trans         &trans         &trans       ,
+                   &trans         &trans          &trans         &trans        &trans       ,  ___            ___            ___            ___            ___          ,
 //               ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────╯
-                                                 &trans          &trans        &mo 3        ,  &trans         &trans         &trans
+                                                  ___            ___           ___          ,  ___            ___            ___
 //                                             ╰──────────────┴──────────────┴──────────────╯╰──────────────┴──────────────┴──────────────╯
 )
 
 ZMK_BASE_LAYER(Mouse,
-//                              ╭──────────────┬──────────────┬──────────────┬──────────────╮╭──────────────┬──────────────┬──────────────┬── ───────────╮
-                                  &kp PG_DN      MS_UP           &kp PG_UP     &trans       ,  &trans         &trans         &trans         &trans       ,  
+//                              ╭──────────────┬──────────────┬──────────────┬──────────────╮╭──────────────┬──────────────┬──────────────┬──────────────╮
+                                  &kp PG_DN      MS_UP           &kp PG_UP     ___          ,  ___            ___            ___            ___          ,  
 //               ╭──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┼──────────────╮  
-                   MS_SCRL        MS_LEFT        MS_DOWN         MS_RIGHT      MS_SCRR      ,  &trans         &trans         &trans         &trans         &trans       ,
+                   MS_SCRL        MS_LEFT        MS_DOWN         MS_RIGHT      MS_SCRR      ,  ___            ___            ___            ___            ___          ,
 //               ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ 
-                   &trans         &mkp RCLK      &mkp MCLK       &mkp LCLK     &trans       ,  &trans         &trans         &trans         &trans         &trans       , 
+                   ___            &mkp RCLK      &mkp MCLK       &mkp LCLK     ___          ,  ___            ___            ___            ___            ___          , 
 //               ╰──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┴──────────────╯
-                                                 &trans          MS_SCRD       MS_SCRU      ,  &trans         &trans         &trans
+                                                 &trans          MS_SCRD       MS_SCRU      ,  ___            ___            ___
 //                                             ╰──────────────┴──────────────┴──────────────╯╰──────────────┴──────────────┴──────────────╯
 )
