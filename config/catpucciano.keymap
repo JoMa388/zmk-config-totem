@@ -45,6 +45,11 @@
 MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS) // Left-hand HRMs.
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
 
+
+/* Combos, mouse emulation */
+#include "includes/mouse.dtsi"
+
+
 // Trigger tap-action on all interrupts.
 #define MT_CORE                                                                \
   flavor = "tap-preferred";                                                    \
@@ -162,7 +167,7 @@ ZMK_BASE_LAYER(Sys,
 //               ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
                    &trans         &trans          &trans        &trans          &trans      ,  &trans         &trans         &trans         &trans         &trans       ,
 //               ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────╯
-                                                 &trans          &trans        &mo 3        ,  &trans         &bt BT_CLR_ALL &trans
+                                                 &trans          &trans        &mo 3        ,  &trans         &trans         &trans
 //                                             ╰──────────────┴──────────────┴──────────────╯╰──────────────┴──────────────┴──────────────╯
 )
 
