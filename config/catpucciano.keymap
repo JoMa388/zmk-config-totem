@@ -88,19 +88,6 @@ ZMK_HOLD_TAP(smart_num, bindings = <&mo>, <&num_dance>; flavor = "balanced";
 ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
               tapping-term-ms = <200>;)
 
-
-// Alt+Tab swapper, requires tri-state module.
-ZMK_TRI_STATE(swapper, bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
-              ignored-key-positions = <LM2 LH1 LH2>;)
-
-// Define mod-morph with a *single* mod trigger for less repetition.
-#define SIMPLE_MORPH(NAME, MOD, BINDING1, BINDING2)                            \
-ZMK_MOD_MORPH(NAME, mods = <(MOD_L##MOD | MOD_R##MOD)>;                      \
-                bindings = <BINDING1>, <BINDING2>;)
-
-// Tap: qmark | Shift + tap: excl.
-SIMPLE_MORPH(qexcl, SFT, &kp QMARK, &kp EXCL)
-
 /* Keymap */
 
 #ifndef ZMK_BASE_LAYER
@@ -117,6 +104,6 @@ ZMK_BASE_LAYER(Base,
 //               ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ 
                    &kp P          &kp F          &kp L          &kp D          &kp V        ,  &kp MINUS      &kp U          &kp O          &kp Y          &kp B        ,  
 //               ╰──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┴──────────────╯
-                                                 &kp BSPC       &kp R          &kp SPACE    ,  &kp SPACE      &MAGIC_SHIFT   &kp ENTER      
+                                                 &kp BSPC       &kp R          &kp SPACE    ,  &kp SPACE      MAGIC_SHIFT   &kp ENTER      
 //                                             ╰──────────────┴──────────────┴──────────────╯╰──────────────┴──────────────┴──────────────╯
 )
