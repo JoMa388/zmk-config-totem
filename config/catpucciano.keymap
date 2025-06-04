@@ -45,9 +45,6 @@
 MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS) // Left-hand HRMs.
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
 
-
-
-
 // Trigger tap-action on all interrupts.
 #define MT_CORE                                                                \
   flavor = "tap-preferred";                                                    \
@@ -55,10 +52,18 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
   quick-tap-ms = <220>;                                                        \
   hold-trigger-key-positions = <0>;
 
+
 &mt { MT_CORE };
 
+/* Keymap */
 
-ZMK_LAYER(Base,
+#ifndef ZMK_BASE_LAYER
+  #define ZMK_BASE_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)                 \
+      ZMK_LAYER(name, LT RT LM RM LB RB LH RH)
+#endif
+
+
+ZMK_BASE_LAYER(Base,
 //                              ╭──────────────┬──────────────┬──────────────┬──────────────╮╭──────────────┬──────────────┬──────────────┬──────────────╮
                                   &kp X          &kp M          &kp G          &kp J        ,  &kp SEMI       &kp DOT        &trans         &kp SQT      ,
 //               ╭──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┼──────────────╮  
