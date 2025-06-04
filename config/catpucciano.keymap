@@ -88,7 +88,12 @@ ZMK_HOLD_TAP(smart_num, bindings = <&mo>, <&num_dance>; flavor = "balanced";
 ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
               tapping-term-ms = <200>;)
 
-
+// Smart-mouse, requires tri-state module.
+ZMK_TRI_STATE(
+    smart_mouse, bindings = <&tog MOUSE>, <&none>, <&tog MOUSE>;
+    ignored-key-positions =
+        <LT2 LM1 LM2 LM3>;
+    ignored-layers = <MOUSE NAV>;)
 
 // Alt+Tab swapper, requires tri-state module.
 ZMK_TRI_STATE(swapper, bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
@@ -112,4 +117,16 @@ ZMK_BASE_LAYER(Base,
 //               ╰──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┴──────────────╯
                                                  &kp BSPC       &kp R          &kp SPACE    ,  &kp SPACE      MAGIC_SHIFT   &kp ENTER      
 //                                             ╰──────────────┴──────────────┴──────────────╯╰──────────────┴──────────────┴──────────────╯
+)
+
+ZMK_BASE_LAYER(Nav,
+//                              ╭──────────────┬──────────────┬──────────────┬──────────────╮╭──────────────┬──────────────┬──────────────┬──────────────╮
+                                  &trans         &kp LS(TAB)     &swapper      &trans       ,  &trans         &trans         &trans         &trans       ,  
+//               ╭──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┼──────────────╮  
+                   &trans         &trans         &trans          &trans        &trans       ,  &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT      &trans       ,
+//               ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ 
+                   &trans         &trans         &trans          &trans        &trans       ,  &trans         &trans         &trans         &trans         &trans       ,
+//               ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┴──────────────╯
+                                                 &trans          &trans        &trans       ,  &trans         &trans         &trans
+//                                             ╰──────────────┴──────────────┴──────────────╯╰──────────────┴──────────────┴──────────────╯                                       
 )
