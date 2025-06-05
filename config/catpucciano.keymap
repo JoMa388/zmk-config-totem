@@ -126,8 +126,7 @@ ZMK_TRI_STATE(
 ZMK_TRI_STATE(swapper, bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
               ignored-key-positions = <LM2 LH1 LH2>;)
 
-ZMK_TAP_DANCE(flow_esc, bindings = <&kp ESC>, <&kp LA(SPACE)>;
-              tapping-term-ms = <200>;)
+
 // Define mod-morph with a *single* mod trigger for less repetition.
 #define SIMPLE_MORPH(NAME, MOD, BINDING1, BINDING2)                            \
 ZMK_MOD_MORPH(NAME, mods = <(MOD_L##MOD | MOD_R##MOD)>;                      \
@@ -180,7 +179,7 @@ ZMK_BASE_LAYER(Base,
 //               ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ 
                    &kp SQT        &kp Q          &kp M          &kp D          &kp V        ,  &dot_morph     &kp U          &kp O          &kp Y          &qexcl       ,  
 //               ╰──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┴──────────────╯
-                                                 &flow_esc      &lt FN R       SMART_NUM    ,  &lt NAV F      MAGIC_SHIFT    &kp RET
+                                                 &kp SPACE      &lt FN R       SMART_NUM    ,  &lt NAV F      MAGIC_SHIFT    &kp RET
 //                                             ╰──────────────┴──────────────┴──────────────╯╰──────────────┴──────────────┴──────────────╯
 )
 
@@ -190,9 +189,9 @@ ZMK_BASE_LAYER(Nav,
 //               ╭──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┼──────────────╮  
                    &sk LGUI       &sk LALT       &sk LSHFT      &sk LCTRL      ___          ,  NAV_LEFT       NAV_DOWN       NAV_UP         NAV_RIGHT      NAV_BSPC     ,
 //               ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ 
-                   ___            ___            ___            ___            ___          ,  ___            &kp TAB        ___            ___            NAV_DEL      ,
+                   ___            ___            ___            ___            ___          ,  ___            &kp RET        &kp TAB        ___            NAV_DEL      ,
 //               ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┴──────────────╯
-                                                 ___            CANCEL         &mo SYS      ,  XXX            CANCEL         ___ 
+                                                 ___            CANCEL         &mo SYS      ,  XXX            ___            ___ 
 //                                             ╰──────────────┴──────────────┴──────────────╯╰──────────────┴──────────────┴──────────────╯                                       
 )
 
