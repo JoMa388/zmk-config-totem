@@ -164,9 +164,9 @@ SIMPLE_MORPH(rpar_gt, SFT, &kp RPAR, &kp GT)
 #define MEH9 &kp LC(LS(LA(N9)))
 
 // Symbols
-ZMK_TAP_DANCE(brace,   bindings = <&kp LBRC, <&kp RBRC; tapping-term-ms = <200>;)
-ZMK_TAP_DANCE(paren,   bindings = <&kp LPAR, <&kp RPAR; tapping-term-ms = <200>;)
-ZMK_TAP_DANCE(bracket, bindings = <&kp LBKT, <&kp RBKT; tapping-term-ms = <200>;)
+ZMK_TAP_DANCE(brace,   bindings = <&kp LBRC>, <&kp RBRC>; tapping-term-ms = <200>;)
+ZMK_TAP_DANCE(paren,   bindings = <&kp LPAR>, <&kp RPAR>; tapping-term-ms = <200>;)
+ZMK_TAP_DANCE(bracket, bindings = <&kp LBKT>, <&kp RBKT>; tapping-term-ms = <200>;)
 /* Keymap */
 
 #ifndef ZMK_BASE_LAYER
