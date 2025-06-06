@@ -43,7 +43,7 @@ ZMK_COMBO(paste,       &kp LS(INS),    LM0 LB0,    BASE NAV NUM, COMBO_TERM_SLOW
 
 /* Horizontal combos - right hand */
 ZMK_COMBO(under,       &kp UNDER,      RT0 RT1,    BASE     NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
-ZMK_COMBO(minus,       &kp MINUS,      RT1 RM2,    BASE     NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(minus,       &kp MINUS,      RT1 RT2,    BASE     NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(z,           &kp Z,          RT2 RT3,    BASE        , COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 ZMK_COMBO(lbkt,        &kp LBRC,       RM0 RM1,    BASE NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
