@@ -15,7 +15,7 @@
 
 
 /* Horizontal combos - left hand */
-
+ZMK_COMBO(q,           &kp Q,          LT3 LT2,     BASE NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(mouse,       &smart_mouse,   LT2 LT1,     BASE NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 ZMK_COMBO(esc,         &kp ESC,        LM2 LM1,     BASE NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
@@ -74,10 +74,9 @@ ZMK_COMBO(minus2,      &kp MINUS,      RM0 RB0,         NAV    , COMBO_TERM_SLOW
 
 /* Thumb combos - left hand */
 ZMK_COMBO(ttab,        &kp TAB,        LH2 LH1,    BASE NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(bspc,        &kp BSPC,       LH1 LH0,    BASE     NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(bspc,        &kp BSPC,       LH1 LH0,    BASE NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
 /* Thumb combos - right hand */
-ZMK_COMBO(f,           &kp F,          RH0 RH1,    BASE NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(ret,         &kp RET,        RH1 RH2,    BASE NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(ret,         &kp RET,        RH0 RH1,    BASE NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
 
