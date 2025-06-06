@@ -77,7 +77,7 @@ ZMK_COMBO(ttab,        &kp TAB,        LH2 LH1,    BASE NAV NUM, COMBO_TERM_SLOW
 ZMK_COMBO(bspc,        &kp BSPC,       LH1 LH0,    BASE     NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
 /* Thumb combos - right hand */
-ZMK_COMBO(space,       &kp SPACE,      RH0 RH1,    BASE NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(f,           &kp F,          RH0 RH1,    BASE NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(ret,         &kp RET,        RH1 RH2,    BASE NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
 
