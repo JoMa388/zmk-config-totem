@@ -150,16 +150,15 @@ ZMK_TAP_DANCE(bracket, bindings = <&kp LBKT>, <&kp RBKT>; tapping-term-ms = <200
 
 ZMK_BASE_LAYER(Base,
 //                              ╭──────────────┬──────────────┬──────────────┬──────────────╮╭──────────────┬──────────────┬──────────────┬──────────────╮
-                                  &kp W          &kp F          &kp P          &kp B        ,  &kp J          &kp L          &kp U          &kp Y        ,
+                                  &kp W          &kp L          &kp P          &kp B        ,  &kp SQT        &kp J          &kp F          &qexcl       ,
 //               ╭──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┼──────────────╮  
-                   &hml LGUI A    &hml LALT R    &hml LCTRL S   &hml LSHFT T   &kp G        ,  &kp M          &hmr RSHFT N   &hmr RCTRL E   &hmr RALT I    &hmr RGUI O  ,
+                   &hml LGUI C    &hml LALT S    &hml LSHFT N   &hml LCTRL T   &kp G        ,  &comma_morph   &hmr RCTRL A   &hmr RSHFT E   &hmr RALT I    &hmr RGUI H  ,
 //               ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ 
-                   &kp TAB        &kp X          &kp C          &kp D          &kp V        ,  &kp K          &kp H          &comma_morph   &dot_morph     &qexcl       ,  
+                   &kp TAB        &kp X          &kp M          &kp D          &kp V        ,  &dot_morph     &kp U          &kp O          &kp Y          &kp K        ,  
 //               ╰──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┴──────────────╯
-                                                 &kp ESC        &lt FN SQT     &lt 2 SPACE  ,  &lt NAV BSPC   MAGIC_SHIFT    &kp RET 
+                                                 &kp ESC        &lt FN R       &lt 2 BSPC   ,  &lt NAV SPACE  MAGIC_SHIFT    &kp BSPC 
 //                                             ╰──────────────┴──────────────┴──────────────╯╰──────────────┴──────────────┴──────────────╯
 )
-
 ZMK_BASE_LAYER(Nav,
 //                              ╭──────────────┬──────────────┬──────────────┬──────────────╮╭──────────────┬──────────────┬──────────────┬──────────────╮
                                   &kp LA(F4)     ___            ___            ___          ,  ___            &kp PG_DN      &kp PG_UP      ___          ,  
