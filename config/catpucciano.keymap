@@ -62,10 +62,6 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
 
 &mt { MT_CORE };
 
-#define NAV_BSPC  &mt LC(BSPC) BSPC  // Tap: bspc  | Long-tap: delete word bwd.
-#define NAV_DEL   &mt LC(DEL)  DEL   // Tap: del   | Long-tap: delete word fwd.
-
-
 /* Magic-shift & auto-layers */
 
 // Tap: repeat after alpha, else sticky-shift |
@@ -123,6 +119,8 @@ SIMPLE_MORPH(qexcl, SFT, &kp QMARK, &kp EXCL)
 
 // Misc aliases
 #define CANCEL    &kp K_CANCEL            // Cancel caps-word & auto-layers.
+#define NAV_BSPC  &mt LC(BSPC) BSPC  // Tap: bspc  | Long-tap: delete word bwd.
+#define NAV_DEL   &mt LC(DEL)  DEL   // Tap: del   | Long-tap: delete word fwd.
 
 // DisplayFusion Ctrl + Shift + Alt
 #define MEH0 &kp LC(LS(LA(N0)))
@@ -136,10 +134,6 @@ SIMPLE_MORPH(qexcl, SFT, &kp QMARK, &kp EXCL)
 #define MEH8 &kp LC(LS(LA(N8)))
 #define MEH9 &kp LC(LS(LA(N9)))
 
-// Symbols
-ZMK_TAP_DANCE(brace,   bindings = <&kp LBRC>, <&kp RBRC>; tapping-term-ms = <200>;)
-ZMK_TAP_DANCE(paren,   bindings = <&kp LPAR>, <&kp RPAR>; tapping-term-ms = <200>;)
-ZMK_TAP_DANCE(bracket, bindings = <&kp LBKT>, <&kp RBKT>; tapping-term-ms = <200>;)
 /* Keymap */
 
 #ifndef ZMK_BASE_LAYER
@@ -165,7 +159,7 @@ ZMK_BASE_LAYER(Nav,
 //               ╭──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┼──────────────╮  
                    &sk LGUI       &sk LALT       &sk LSHFT      &sk LCTRL      ___          ,  &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT      NAV_BSPC     ,
 //               ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ 
-                   ___            ___            ___            ___            ___          ,  &kp TA         &kp RET        &kp RBRC       &kp RBKT       NAV_DEL      ,
+                   ___            ___            ___            ___            ___          ,  &kp TAB        &kp RET        &kp RBRC       &kp RBKT       NAV_DEL      ,
 //               ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┴──────────────╯
                                                  ___            CANCEL         &mo SYS      ,  XXX            ___            ___ 
 //                                             ╰──────────────┴──────────────┴──────────────╯╰──────────────┴──────────────┴──────────────╯                                       
