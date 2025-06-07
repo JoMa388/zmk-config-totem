@@ -39,7 +39,17 @@ ZMK_COMBO(fslh,        &kp FSLH,       LM2 LB2,    BASE NAV NUM, COMBO_TERM_SLOW
 ZMK_COMBO(copy,        &kp LC(INS),    LM1 LB1,    BASE NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(paste,       &kp LS(INS),    LM0 LB0,    BASE NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
+/* Vertical combos - left hand FN Fkeys */
 
+ZMK_COMBO(f13,         &kp F13,        LT3 LM3,              FN, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(f14,         &kp F14,        LT2 LM2,              FN, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(f15,         &kp F15,        LT1 LT1,              FN, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(f16,         &kp F16,        LM0 LB0,              FN, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(f17,         &kp F17,        LM4 LB4,              FN, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(f18,         &kp F18,        LM3 LB3,              FN, COMBO_TERM_SLOW, COMBO_IDLE_SLOW) 
+ZMK_COMBO(f19,         &kp F19,        LM2 LB2,              FN, COMBO_TERM_SLOW, COMBO_IDLE_SLOW) 
+ZMK_COMBO(f20,         &kp F20,        LM1 LB1,              FN, COMBO_TERM_SLOW, COMBO_IDLE_SLOW) 
+ZMK_COMBO(f21,         &kp F21,        LM0 LB0,              FN, COMBO_TERM_SLOW, COMBO_IDLE_SLOW) 
 
 /* Horizontal combos - right hand */
 ZMK_COMBO(under,       &kp UNDER,      RT0 RT1,    BASE     NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
