@@ -62,22 +62,8 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
 
 &mt { MT_CORE };
 
-ZMK_HOLD_TAP(mt_home, bindings = <&masked_home>, <&kp>; MT_CORE)
-ZMK_HOLD_TAP(mt_end, bindings = <&masked_end>, <&kp>; MT_CORE)
-
-#define NAV_LEFT  &mt_home 0   LEFT  // Tap: left  | Long-tap: start of line.
-#define NAV_RIGHT &mt_end 0    RIGHT // Tap: right | Long-tap: end   of line.
-#define NAV_UP    &mt LC(HOME) UP    // Tap: up    | Long-tap: start of doc.
-#define NAV_DOWN  &mt LC(END)  DOWN  // Tap: down  | Long-tap: end   of doc.
 #define NAV_BSPC  &mt LC(BSPC) BSPC  // Tap: bspc  | Long-tap: delete word bwd.
 #define NAV_DEL   &mt LC(DEL)  DEL   // Tap: del   | Long-tap: delete word fwd.
-
-// Mask CTRL on left/right hold to avoid accidental jumps to start/end of doc.
-#define MASK_MODS(NAME, MODS, BINDING)                                         \
-  ZMK_MOD_MORPH(NAME, bindings = <BINDING>, <BINDING>; mods = <MODS>;)
-
-MASK_MODS(masked_home, (MOD_LCTL), &kp HOME)
-MASK_MODS(masked_end,  (MOD_LCTL), &kp END)
 
 
 /* Magic-shift & auto-layers */
@@ -106,15 +92,6 @@ ZMK_ADAPTIVE_KEY(
   /delete-property/ ignore-modifiers;
 };
 
-// Tap: num-word | double-tap: sticky num-layer | Hold: num-layer.
-
-#define SMART_NUM &smart_num NUM 0
-
-ZMK_HOLD_TAP(smart_num, bindings = <&mo>, <&num_dance>; flavor = "balanced";
-             tapping-term-ms = <200>; quick-tap-ms = <QUICK_TAP_MS>;)
-ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
-              tapping-term-ms = <200>;)
-
 // Smart-mouse, requires tri-state module.
 ZMK_TRI_STATE(
     smart_mouse, bindings = <&tog MOUSE>, <&none>, <&tog MOUSE>;
@@ -142,10 +119,6 @@ SIMPLE_MORPH(dot_inner_morph, CTL, &kp COLON, &kp GREATER_THAN)
 
 // Tap: qmark | Shift + tap: excl.
 SIMPLE_MORPH(qexcl, SFT, &kp QMARK, &kp EXCL)
-
-// Tap: left/right parenthesis | Shft + tap: less-than/greater-than.
-SIMPLE_MORPH(lpar_lt, SFT, &kp LPAR, &kp LT)
-SIMPLE_MORPH(rpar_gt, SFT, &kp RPAR, &kp GT)
 
 
 // Misc aliases
@@ -177,13 +150,13 @@ ZMK_TAP_DANCE(bracket, bindings = <&kp LBKT>, <&kp RBKT>; tapping-term-ms = <200
 
 ZMK_BASE_LAYER(Base,
 //                              ╭──────────────┬──────────────┬──────────────┬──────────────╮╭──────────────┬──────────────┬──────────────┬──────────────╮
-                                  &kp W          &kp L          &kp P          &kp B        ,  &kp SQT        &kp J          &kp F          &qexcl       ,
+                                  &kp W          &kp F         &kp R           &kp B        ,  &kp J          &kp L          &kp U          &kp Y        ,
 //               ╭──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┼──────────────╮  
-                   &hml LGUI C    &hml LALT S    &hml LSHFT N   &hml LCTRL T   &kp G        ,  &comma_morph   &hmr RCTRL A   &hmr RSHFT E   &hmr RALT I    &hmr RGUI H  ,
+                   &hml LGUI A    &hml LALT R    &hml LCTRL S   &hml LSHFT T   &kp G        ,  &kp M          &hmr RSHFT N   &hmr RCTRL E   &hmr RALT I    &hmr RGUI O  ,
 //               ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ 
-                   &kp TAB        &kp X          &kp M          &kp D          &kp V        ,  &dot_morph     &kp U          &kp O          &kp Y          &kp K        ,  
+                   &kp TAB        &kp X          &kp C          &kp D          &kp V        ,  &kp K          &kp H          &comma_morph   &dot_morph     &qexcl       ,  
 //               ╰──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┴──────────────╯
-                                                 &kp ESC        &lt FN R       SMART_NUM    ,  &lt NAV SPACE  MAGIC_SHIFT    &kp BSPC 
+                                                 &kp ESC        &lt FN SQT     &lt 2 SPACE  ,  &lt NAV BSPC   MAGIC_SHIFT    &kp RET 
 //                                             ╰──────────────┴──────────────┴──────────────╯╰──────────────┴──────────────┴──────────────╯
 )
 
@@ -191,7 +164,7 @@ ZMK_BASE_LAYER(Nav,
 //                              ╭──────────────┬──────────────┬──────────────┬──────────────╮╭──────────────┬──────────────┬──────────────┬──────────────╮
                                   &kp LA(F4)     ___            ___            ___          ,  ___            &kp PG_DN      &kp PG_UP      ___          ,  
 //               ╭──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┼──────────────╮  
-                   &sk LGUI       &sk LALT       &sk LSHFT      &sk LCTRL      ___          ,  NAV_LEFT       NAV_DOWN       NAV_UP         NAV_RIGHT      NAV_BSPC     ,
+                   &sk LGUI       &sk LALT       &sk LSHFT      &sk LCTRL      ___          ,  &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT      NAV_BSPC     ,
 //               ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ 
                    ___            ___            ___            ___            ___          ,  ___            &kp RET        &kp TAB        ___            NAV_DEL      ,
 //               ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┴──────────────╯
@@ -201,13 +174,13 @@ ZMK_BASE_LAYER(Nav,
 
 ZMK_BASE_LAYER(Num,
 //                              ╭──────────────┬──────────────┬──────────────┬──────────────╮╭──────────────┬──────────────┬──────────────┬──────────────╮
-                                  ___            &kp LS(TAB)    &swapper       ___          ,  ___            &bracket       &kp PLUS       ___          ,  
+                                  &kp GRAVE      &kp LS(TAB)    &swapper       ___          ,  &kp            &kp PLUS       &kp PLUS       &kp LT       ,  
                //╭──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┼──────────────╮  
-                   &kp N1         &kp N2         &kp N3         &kp N4         &kp N5       ,  &kp MINUS      &kp LT         &kp EQUAL      &kp GT         ___          ,
+                   &kp N1         &kp N2         &kp N3         &kp N4         &kp N5       ,  &kp MINUS      &paren         &kp EQUAL      &kp GT         &kp PIPE     ,
 //               ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ 
-                   &kp N6         &kp N7         &kp N8         &kp N9         &kp N0       ,  &kp UNDER      &brace         &paren          ___           ___          ,  
+                   &kp N6         &kp N7         &kp N8         &kp N9         &kp N0       ,  &kp UNDER      &brace         &bracket       &kp FSLH       &kp BSLH     ,  
 //               ╰──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┴──────────────╯
-                                                 ___            ___            CANCEL       ,  ___            ___            ___
+                                                 ___            ___            ___          ,  ___            ___            ___
 //                                             ╰──────────────┴──────────────┴──────────────╯╰──────────────┴──────────────┴──────────────╯  
 )
 ZMK_BASE_LAYER(FN,
