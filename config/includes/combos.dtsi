@@ -59,8 +59,10 @@ ZMK_COMBO(f21,         &kp F21,        LM0 LB0,              FN, COMBO_TERM_SLOW
 /* Extra */
 ZMK_COMBO(mouse,       &smart_mouse,   LT2 LT1,     BASE NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
-/* Thumb combos - left hand */
-ZMK_COMBO(flow,        &kp LA(SPACE),  LH1 LH0,     BASE NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+/* Thumb combos - left hand */  
+ZMK_COMBO(flow,        &kp LA(SPACE),  LH2 LH1,     BASE NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(tab,         &kp TAB         LH1 LH0,     BASE NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+
 
 /* Thumb combos - right hand */
 ZMK_COMBO(ret,         &kp RET,        RH0 RH1,    BASE NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
