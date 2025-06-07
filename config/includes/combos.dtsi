@@ -39,7 +39,7 @@ ZMK_COMBO(tidle,       &kp TILDE,      RT3 RM3,    BASE NAV NUM, COMBO_TERM_SLOW
 
 /* Horizontal Middle, Symbols */
 ZMK_COMBO(sqt,         &kp SQT,         RM1 RM2,    BASE NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(lbracket,    &k  LBKT,        RM2 RM3,    BASE NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(lbracket,    &kp LBKT,        RM2 RM3,    BASE NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(semi,        &kp SEMI,        RB1 RB2,    BASE NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(rbracket,    &kp RBKT,        RB2 RB3,    BASE NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
