@@ -48,7 +48,7 @@ ZMK_COMBO(rbracket,    &kp RBKT,        RB2 RB3,    BASE NAV NUM, COMBO_TERM_SLO
 ZMK_COMBO(f13,         &kp F13,        LT3 LM3,              FN, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(f14,         &kp F14,        LT2 LM2,              FN, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(f15,         &kp F15,        LT1 LM1,              FN, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(f16,         &kp F16,        LM0 LB0,              FN, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(f16,         &kp F16,        LT0 LM0,              FN, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(f17,         &kp F17,        LM4 LB4,              FN, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(f18,         &kp F18,        LM3 LB3,              FN, COMBO_TERM_SLOW, COMBO_IDLE_SLOW) 
 ZMK_COMBO(f19,         &kp F19,        LM2 LB2,     BASE NAV FN, COMBO_TERM_SLOW, COMBO_IDLE_SLOW) 
