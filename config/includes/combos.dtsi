@@ -21,10 +21,8 @@ ZMK_COMBO(z,           &kp Z,          RT2 RT3,     BASE NAV NUM, COMBO_TERM_FAS
 
 
 /* Clipboard Manuipulation */
-ZMK_COMBO(redo,        &kp LC(Y),      LT1 LT0,     BASE NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(redo,        &kp LC(Y),      LB1 LB0,     BASE NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(undo,        &kp LC(Z),      LM1 LM0,     BASE NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
-ZMK_COMBO(cut,         &kp LC(X),      LM3 LM2,     BASE NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
-ZMK_COMBO(copy,        &kp LC(INS),    LM2 LM1,     BASE NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(paste,       &kp LS(INS),    LB2 LB1,     BASE NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(ctrlL,       &kp LC(L),      LM2 LM1,     BASE NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST) 
 
