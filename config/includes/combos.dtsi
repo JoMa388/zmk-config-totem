@@ -37,11 +37,11 @@ ZMK_COMBO(star,        &kp STAR,       RT2 RM2,    BASE NAV NUM, COMBO_TERM_SLOW
 ZMK_COMBO(tidle,       &kp TILDE,      RT3 RM3,    BASE NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
 /* Horizontal Middle, Symbols */
-ZMK_COMBO(lbrc,        &kp LBRC,        RM0 RM1,    BASE NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(rbrc,        &kp RBRC,        RB0 RB1,    BASE NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(lbrc,        &kp LBRC,        RM0 RM1,    BASE NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW) 
 ZMK_COMBO(dqt,         &kp DQT,         RM1 RM2,    BASE NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(lbkt,        &kp LBKT,        RM2 RM3,    BASE NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(semi,        &kp SEMI,        RB1 RB2,    BASE NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(rbrc,        &kp RBRC,        RB0 RB1,    BASE NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(sqt,         &kp SQT,         RB1 RB2,    BASE NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(rbkt,        &kp RBKT,        RB2 RB3,    BASE NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
 /* Vertical combos - left hand FN Fkeys */
