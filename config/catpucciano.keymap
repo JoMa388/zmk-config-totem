@@ -61,7 +61,7 @@
         };
 
         // Tap: ? | Shift + tap: ! 
-        q_excl: question_morph {
+        qexcl: question_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "QUESTION_MORPH";
             bindings = <&kp QMARK>, <&kp EXCL>;
