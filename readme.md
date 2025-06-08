@@ -1,7 +1,6 @@
 # My Personal zmk config
 
 Personal documentation of my zmk config to figure out what I prefer and can optimize. Currently using a hands down promethium personal variation for letters. Utilizing a 34 keyboard layout with the catpucciano
-![](assets/top_white.jpg)
 
 ## Highlights 
 
