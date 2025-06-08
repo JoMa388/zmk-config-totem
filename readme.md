@@ -5,7 +5,7 @@ Personal documentation of my zmk config to figure out what I prefer and can opti
 
 ## Highlights 
 
-- Incorporates many features from - [urob's config](https://github.com/urob/zmk-config)
+- Incorporates many features from [urob's config](https://github.com/urob/zmk-config)
     - Timeless Homerow Mods
     - Magic Shift
     - Smart Mouse
@@ -22,3 +22,9 @@ Personal documentation of my zmk config to figure out what I prefer and can opti
 - PTDB index , LNM columns for minimal SFB
 - J & F above vowels felt most comfortable for me & allows some better vim motion usage compared to f on bottom ring and j on diagonal index
     - Can possibly move k to a better position for vim motion  
+
+## Combos
+![](assets/combos.png)
+
+## Layout
+![](assets/my_keymap.png)
