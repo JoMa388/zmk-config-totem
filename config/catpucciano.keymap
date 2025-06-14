@@ -119,8 +119,10 @@ SIMPLE_MORPH(qexcl, SFT, &kp QMARK, &kp EXCL)
 
 // Misc aliases
 #define CANCEL    &kp K_CANCEL            // Cancel caps-word & auto-layers.
-#define NAV_BSPC  &mt LC(BSPC) BSPC  // Tap: bspc  | Long-tap: delete word bwd.
-#define NAV_DEL   &mt LC(DEL)  DEL   // Tap: del   | Long-tap: delete word fwd.
+#define NAV_BSPC  &mt LC(BSPC) BSPC  // Tap: bspc          | Long-tap: delete word bwd.
+#define NAV_DEL   &mt LC(DEL)  DEL   // Tap: del           | Long-tap: delete word fwd.
+#define NAV_START &mt LC(HOME) HOME  // Tap: Start of line | Long-tap: start of doc.
+#define NAV_END   &mt LC(END)  END   // Tap: End of line   | Long-tap: end   of doc.
 
 // DisplayFusion Ctrl + Shift + Alt
 #define MEH0 &kp LC(LS(LA(N0)))
@@ -155,11 +157,11 @@ ZMK_BASE_LAYER(Base,
 )
 ZMK_BASE_LAYER(Nav,
 //                              ╭──────────────┬──────────────┬──────────────┬──────────────╮╭──────────────┬──────────────┬──────────────┬──────────────╮
-                                  &kp LA(F4)     ___            ___            ___          ,  &kp HOME       &kp PG_DN      &kp PG_UP      &kp END       ,  
+                                  &kp LA(F4)     ___            ___            ___          ,  &NAV_START     &kp PG_DN      &kp PG_UP      &NAV_END     ,  
 //               ╭──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┼──────────────╮  
-                   &sk LGUI       &sk LALT       &sk LSHFT      &sk LCTRL      ___          ,  &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT      &kp ENTER     ,
+                   &sk LGUI       &sk LALT       &sk LSHFT      &sk LCTRL      ___          ,  &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT      &kp ESC      ,
 //               ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ 
-                   ___            ___            ___            ___            ___          ,  &kp TAB        &kp FSLH       &kp EQUAL      &kp GT         NAV_DEL      ,
+                   ___            ___            ___            ___            ___          ,  &kp UNDER      &kp MINUS      &kp FSLH       &kp ENTER      NAV_DEL      ,
 //               ╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┴──────────────╯
                                                  ___            CANCEL         &mo SYS      ,  XXX            ___            ___ 
 //                                             ╰──────────────┴──────────────┴──────────────╯╰──────────────┴──────────────┴──────────────╯                                       
@@ -167,13 +169,13 @@ ZMK_BASE_LAYER(Nav,
 
 ZMK_BASE_LAYER(Num,
 //                              ╭──────────────┬──────────────┬──────────────┬──────────────╮╭──────────────┬──────────────┬──────────────┬──────────────╮
-                                  &kp GRAVE      &kp LS(TAB)    &swapper       ___          ,  &kp PLUS       &kp LBKT       &kp RBKT       &kp TILDE    ,  
+                                  &kp GRAVE      &kp LS(TAB)    &swapper       &kp TILDE    ,  &kp PLUS       &kp LBKT       &kp RBKT       ___          ,  
                //╭──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┼──────────────╮  
-                   &kp N1         &kp N2         &kp N3         &kp N4         &kp N5       ,  &kp EQUAL      &kp GT         &kp LPAR       &kp RPAR      &kp BSLH     ,
+                   &kp N1         &kp N2         &kp N3         &kp N4         &kp N5       ,  &kp DQT        &kp LBRC       &kp LBRC       ___            ___          ,
 //               ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ 
-                   &kp N6         &kp N7         &kp N8         &kp N9         &kp N0       ,  &kp MINUS      &kp LBRC       &kp RBRC       &kp UNDER      &kp PIPE     ,  
+                   &kp N6         &kp N7         &kp N8         &kp N9         &kp N0       ,  &kp SQT        &kp PIPE       &kp BSLH       ___            ___          ,  
 //               ╰──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤├──────────────┼──────────────┼──────────────┼──────────────┴──────────────╯
-                                                 ___            ___            XXX          ,  &kp LT         &kp GT         ___
+                                                 ___            ___            XXX          ,  &kp C_VOL_UP   &kp C_VOL_DN   &kp C_MUTE
 //                                             ╰──────────────┴──────────────┴──────────────╯╰──────────────┴──────────────┴──────────────╯  
 )
 ZMK_BASE_LAYER(FN,
