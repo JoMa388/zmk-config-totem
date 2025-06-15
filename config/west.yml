@@ -7,7 +7,7 @@ manifest:
     - name: dhruvinsh
       url-base: https://github.com/dhruvinsh
     - name: JoMa388
-      url-base: https://github.com/JoMa388  
+      url-base: https://github.com/JoMa388
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -27,6 +27,9 @@ manifest:
       revision: main
     - name: zmk-helpers
       remote: urob
-      revision: main  
+      revision: main
+    - name: zmk-leader-key
+      remote: urob
+      revision: main
   self:
     path: config
