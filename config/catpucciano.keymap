@@ -6,8 +6,6 @@
 
 
 #include "zmk-helpers/helper.h" // urob's helper repo
-#include "zmk-helpers/unicode-chars/greek.dtsi"
-#include "zmk-helpers/unicode-chars/german.dtsi"
 #include "includes/catpucciano.h" // catpucciano key definiton
 
 
